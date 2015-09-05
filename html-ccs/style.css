@@ -1,0 +1,490 @@
+body{
+	background:url('image/02.jpg') repeat-x;
+	padding:10px;
+}
+header{
+	display:block;
+	margin-top:0px;
+	position:relative;
+	font-weight:900;
+}
+h1{
+	color: #0f0f0f;
+	line-height: 1;
+	background-image: url('image/02.jpg') repeat-x;
+	font-family: 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+	font-weight: 900;
+	font-style:oblique;
+	margin: 0 auto;
+	position: absolute;
+	left: 47%;
+	margin-left: -446px;
+	font-size: 36px;
+	padding: 5px 15px 10px;
+	top: 0px;
+}
+/*----------------------------
+	search box
+-----------------------------*/
+#searchform {
+	display: inline-block;
+	margin-bottom: 1px;
+}
+
+.fieldcontainer {
+  display: block;
+  position: absolute;
+  width: 400px;
+  height:50px;
+  margin: 0 auto;
+  top:15px;
+  left:810px;
+}
+
+h2{
+	position: absolute;
+	left:0px;
+	top:30px;
+	font-weight: 600;
+	font-size: 0.6em;
+	opacity:0.8;
+}
+.searchup {
+	position:absolute;
+	top:-10px;
+	left:20px;
+}
+
+.searchup li{
+	width:65px;
+	font-size: 0.5em;
+	font-weight: 100;
+	float:left;
+	overflow:hidden;
+	opacity:0.5;
+}
+.searchfield {
+  position: absolute;
+  display: block;
+  left:58px;
+  top: 37px;
+  width: 210px;
+  height:22px;
+  padding: 1px 1px;
+  padding-right: 1px;
+  background-color: #fff;
+  font-size: 0.6em;
+  color: #ccc;
+  border: 1px solid #c8c8c8;
+  border-bottom-color: #d2e2e7;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;  
+}
+
+.searchfield:focus {
+  width: 210px;
+  color: #666;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
+}
+
+#searchbtn {
+  position: absolute;
+  left: 242px;
+  top: 39px;
+  height: 19px;
+  width: 24px;
+  border: 0;
+  cursor:pointer;
+  opacity: 0.65;
+  background: transparent url('image/03.jpg') top left no-repeat;
+}
+/*----------------------------
+	CSS3 Animated Navigation
+-----------------------------*/
+#Nav{
+	position:relative;
+	left:80px;
+	top:50px;
+}
+.fancyNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+}
+
+.fancyNav li{
+	/* Specifying a fallback color and we define CSS3 gradients for the major browsers: */
+	
+	background-color: #0f0f0f;
+	width:105.7px;
+	height:35px;
+	border-right: 1px solid rgba(9, 9, 9, 0.125);
+	
+	/* Adding a 1px inset highlight for a more polished efect: */
+	
+	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	
+	position:relative;
+	
+	float: left;
+	list-style: none;
+}
+
+.fancyNav li:after{
+
+	/* This creates a pseudo element inslide each LI */	
+	background:#EEAD0E;
+	content:'.';
+	text-indent:-9999px;
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+	
+	/* Gradients! */
+	
+	background-color:#FFD700;
+
+	/* Creating borders with box-shadow. Useful, as they don't affect the size of the element. */
+	
+
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	/* This will create a smooth transition for the opacity property */
+	
+	-moz-transition:0.25s all;
+	-webkit-transition:0.25s all;
+	transition:0.25s all;
+}
+
+/* Treating the first LI and li:after elements separately */
+
+.fancyNav li:first-child{
+	border-radius: 4px 0 0 4px;
+}
+
+.fancyNav li:first-child:after,
+.fancyNav li.selected:first-child:after{
+	box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	border-radius:4px 0 0 4px;
+}
+
+.fancyNav li:last-child{
+	border-radius: 0 4px 4px 0;
+}
+
+/* Treating the last LI and li:after elements separately */
+
+.fancyNav li:last-child:after,
+.fancyNav li.selected:last-child:after{
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	
+	border-radius:0 4px 4px 0;
+}
+
+.fancyNav li:hover:after,
+.fancyNav li.selected:after,
+.fancyNav li:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:1;
+}
+
+.fancyNav:hover li.selected:after,
+.fancyNav:hover li:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:0;
+}
+
+.fancyNav li.selected:hover:after,
+.fancyNav li:target:hover:after{
+	opacity:1 !important;
+}
+
+/* Styling the anchor elements */
+
+.fancyNav li a{
+	color: #f0f0f0;
+	display: inline-block;
+	font: 12px/1 Lobster,Arial,sans-serif;
+	padding: 12px 35px 14px;
+	position: relative;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+}
+
+#banner{
+	  position:relative;
+	  left:120px;
+	  top:45px;
+	  width:961px;
+	  height:292px;
+	  #CCC;
+}
+/*----------------------------
+	Notification bar
+-----------------------------*/
+#notification{
+	  position:absolute;
+	  left:140px;
+	  top:430px;
+	  width:958px;
+	  height:30px;
+	  background:#FFFFFF;
+}
+.announcement{
+	  position:absolute;
+	  top:0px;
+	  left:110px;
+	  border:15px;
+	  padding:4px 4px 6px 4px;
+	  margin:6px 0px 6px 0px;
+}
+.announcement li{
+	  font-size: 0.5em;
+	  font-weight: 100;
+      list-style: url("image/08.jpg") outside circle;
+}
+
+#abstract {
+	width:795px;
+}
+#knowmore{
+	  position:absolute;
+	  top:0px;
+	  left:870px;
+	  width:90px;
+	  height:30px;
+	  opacity:0.6;
+	  font-size: 0.5em;
+	  font-weight: 100;
+}
+#knowmore a{
+	  position:absolute;
+	  top:2px;
+}
+/*
+#not{
+	  position:absolute;
+	  left:140px;
+	  top:460px;
+	  width:961px;
+	  height:125px;
+	  font-size: 0.5em;
+	  font-weight: 100;
+	  background:#FFFFFF;
+}
+ .out{ border-top:40px #D6D3D6 solid;/*上边框宽度等于表格第一行行高*/
+                                           /* width:0px;/*让容器宽度为0*/ 
+                                         /* height:0px;/*让容器高度为0*/ 
+      /*   border-left:80px #BDBABD solid;/*左边框宽度等于表格第一行第一格宽度*/ 
+                                 /* position:relative;/*让里面的两个子容器绝对定位*//*} 
+.out em{font-style:normal;display:block;position:absolute;top:-25px;left:-70px;width:55x;} 
+.out b{font-style:normal;display:block;position:absolute;top:-40px;left:-40px;width:35px;} */
+/*----------------------------
+	show box
+-----------------------------*/
+#showbox{
+	  position:absolute;
+	  left:140px;
+	  top:463px;
+	  width:958px;
+	  height:260px;
+	  background:#FFFFFF;
+	  border:1px solid #DEDEDE;
+	  border-radius:7px;
+	  -webkit-box-shadow: 2px 2px 15px #DEDEDE;
+}
+#profile{
+	  position:absolute;
+	  left:3px;
+	  top:5px;
+	  width:265px;
+	  height:250px;
+	  background:-moz-linear-gradient(top,#b8c4cb,#f6f6f8);
+	  background:-webkit-gradient(linear, 0% 0%, 0% 60%,from(#EAEAEA), to(#FFFFFF));
+}
+.title1 b{
+	  position:absolute;
+	  top:12px;
+	  left:8px;
+	  display:inline-block;
+	  color:#525252;
+	  font-size: 13px;
+}
+.title1 em{
+	  position:absolute;
+	  left:90px;
+	  top:12px;
+	  font-size: 13px;
+	  font-style:normal;
+	  color:#EE9A00;
+}
+#abstr{
+	  position:absolute;
+	  top:105px;
+	  left:-25px;
+	  width:235px;
+	  font-size:4px;
+	  list-style-type:none;
+	  text-indent:2em;
+	  line-height:20px;
+}
+#tidings{
+	  position:absolute;
+	  left:280px;
+	  top:5px;
+	  width:380px;
+	  height:250px;
+	  background:#FFFFFF;
+}
+.title2 b{
+	  position:absolute;
+	  top:12px;
+	  left:8px;
+	  display:inline-block;
+	  color:#525252;
+	  font-size: 13px;
+}
+.title2 em{
+	  position:absolute;
+	  left:90px;
+	  top:12px;
+	  font-size: 13px;
+	  font-style:normal;
+	  color:#EE9A00;
+}
+#detailnews{
+	  top:30px;
+	  left:170px;
+	  position:absolute;
+	  width:200px;
+}
+#detailnews h3{
+	  font-size:13px;
+}
+#detailnews p{
+	  text-indent:2em;
+	  font-size:13px;
+	  opacity:0.6;
+	  line-height:18px;
+}
+#detailnews a{
+	  color:#CD0000;
+	  text-decoration: none;
+}
+
+#newsindetail{
+	  position:absolute;
+	  left:-12px;
+	  top:100px;
+	  font-size:12px;
+	  
+}
+#newsindetail li{
+	  padding:7px 0px 5px 0px;
+	  border-bottom:1px dotted #969696; height:16px;width:330px;
+	  color:#000;
+	  list-style: url("image/08.jpg") outside circle;
+}
+
+#contractus{
+	  position:absolute;
+	  left:663px;
+	  top:5px;
+	  width:250px;
+	  height:250px;
+	  background:#FFFFFF;
+}
+.title3 b{
+	  position:absolute;
+	  top:12px;
+	  left:8px;
+	  display:inline-block;
+	  color:#525252;
+	  font-size: 13px;
+}
+.title3 em{
+	  position:absolute;
+	  left:90px;
+	  top:12px;
+	  font-size: 13px;
+	  font-style:normal;
+	  color:#EE9A00;
+}
+#contractus ul{
+	  padding:10px 15px 15px 10px;
+	  position:absolute;
+	  top:20px;
+	  left:0px;
+	  height:170px;
+	  width:265px;
+	  list-style-type:none;
+	  background:url("image/06.jpg");
+}
+#contractus li{
+	  font-size:12px;
+	  padding:1px 7px 7px 0px;
+}
+/*----------------------------
+	end
+-----------------------------*/
+#endnavigation{
+	  position:absolute;
+	  top:730px;
+	  left:140px;
+	  width:961px;
+	  height:30px;
+	  background:#333333;
+	  border-radius:2px;
+	  
+}
+#endnavigation ul{
+	  position:absolute;
+	  top:-8px;
+}
+#endnavigation a{
+	  color:#FFFFFF;
+	  font-size:13px;
+}
+#end{
+	  position:absolute;
+	  top:770px;
+	  left:140px;
+	  width:961px;
+	  height:50px;
+}
+#end a{
+	  position:absolute;
+	  left:120px;
+	  font-style:normal;
+	  font-size:13px;
+	  color:#0F0F0F;
+	  font-weight:100;
+}
+#end p{
+	  position:absolute;
+	  left:150px;
+	  top:12px;
+	  font-style:normal;
+	  font-size:13px;
+	  color:#0F0F0F;
+	  font-weight:100;
+}
+
