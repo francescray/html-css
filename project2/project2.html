@@ -1,0 +1,52 @@
+<!doctpe html>
+<!--问题：
+	1.只能靠插入盒子来调节高度吗？
+	   在header中h2的高度可以靠调节margin-top
+	   来调节其高度。而对于a的高度这不可靠调节
+	   盒子的这些参数来调整。是否因为h2是属于float
+	   浮动。
+	2.最底部的叠层在static 中如何做出
+	-->
+   
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href=" style.css" />
+</head>
+<body>
+	<div id="header">
+		<h1></h1>
+		<a>叶壮-InMe分析师</a>
+		<h2>+</h2>
+	</div>
+	<div id="FrontCover">
+		<img src="images/04.jpg" >
+	</div>
+	<div id="person">
+		<ul id="ul1">
+			<li id="name"><h1>南亭的小调</h1><a>爱情治愈师</a></li>
+			<li id="title"><a>国家二级心理咨询师</a></li>
+			<li id="abstract"><a>真诚又亲和，享受独处的时刻，对生命的旅途充满好奇，成长是我最乐于做的事情，倾听你的声音...</a></li>
+			<li id="arraw"><img src="images/07.jpg"></li>
+		</ul>
+		<ul id="ul2">
+			<li>情感心理</li>
+			<li>人际关系</li>
+			<li>职场心理</li>
+		</ul>
+	</div>
+	<div class="Line"> </div>
+	<div id="twochoice">
+		<li id="page">他的文章</li>
+		<li id="answer">他的回答</li>
+	</div>
+	<div class="Line"> </div>
+	<div id="article">
+		<h1>熬过最困难的时候</h1>
+		<a>心灵沟通</a>
+		<p>生命中总有一些时光，那就是你觉得实在抗不下去。忍不下去的时候绝望哭过闹过...</p>
+	</div>
+	<div id="happy"><img src="images/11.jpg"></div>
+	<div id="recommond"><img src="images/10.jpg"></div>
+	</body>
+</html>
