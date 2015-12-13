@@ -1,157 +1,165 @@
-body{
-}
-#header{
-	width:748px;
-	height:95px;
-	display: block;
+
+#header {
 	background:#2E2E2E;
-	border:1px solid black;
-	position: static;
+	height: 40px;
 }
 #header a{
 	color:#FFFFFF;
-	position:static;
-	margin-left:235px;
-	margin-right:1px;
-	font-weight: 300;
-	font-size: 3em;
-}
-#header h2{
-	color:#FFFFFF;
-	position:static;
-	margin-top:-15px;
-	margin-bottom:0px;
-	margin-right:35px;
-	font-weight: 700;
-	font-size: 4em;
-	float: right;/*左浮动*/
-}
-#FrontCover{
-	position: static;
-	width:750px; 
-	height:462px;    
-}
-#person{
-	height:300px;
-}
-#ul1{
-	width:750px;
-	height:200px;
+	margin-left:90px;
+	font-weight: 150;
+	font-size: 1.4em;
+	opacity: 0.8;
 }
 #ul1 li{
 	overflow:hidden;
-	margin-bottom:20px;
+	margin-bottom:8px;
+}
+#ul1 {
+	padding:0px 15px;
 }
 #name h1{
 	margin:0;
-	width:160px;
 	color:#626a73;
-	font-size:1.8em;
+	font-size:1em;
 	float:left;
+	opacity: 0.7;
 }
 #name a{
-	margin-left:20px;
-	margin-top:6px;
-	padding-top:4px;
-	padding-left:12px;
+	margin-left:15px;
+	margin-top: 2px;
+	padding-top:1px;
+	padding-left:4px;
 	border-radius:2px;
-	width:110px;
-	height:26px;
+	height:14px;
 	float:left;
 	background:#51b8f2;
-	font-size:1.2em;
+	font-size:0.4em;
 	color:#FFFFFF;
 }
 #title {
 	color:c6c9cc;
-	font-size:1.6em;
+	font-size:0.3em;
+	padding-bottom: 8px;
 }
 #abstract{
-	width:725px;
 	color:c6c9cc;
-	font-size:1.65em;
+	font-size:0.5em;
 }
 #arraw { 
-	margin-top:-50px;
+	margin-top:-30px;
 	margin-right:33px;
 	float:right;
 }
+#choice{
+	height:25px;
+}
 #ul2{
-	width:750px;
-	height:200px;
+	padding:0px 15px;
+	margin-bottom: 10px;
 }
 #ul2 li{
 	color:#FFFFFF;
-	width:105px;
-	height:35px;
 	float: left;
-	margin-left:12px;
-	padding-left:14px;
-	padding-top:8px;
+	margin-left:6px;
+	padding:2px 12px;
 	overflow:hidden;
 	background:#dadfe5;
 	border-radius:20px;
-	font-size:1.4em;
+	font-size:0.2em;
 }
-.Line{
-	margin:0;
-	padding:0; 
-	height:1.5px;
-	width:750px;
-	background-color:#0A0A0A;
-	overflow:hidden;
+#twochoice{
+	color:rgb(151,159,165);
+	font-size: 14px;
+	height: 43px;
+	border-top: 1px solid #DADFE5;
+	border-bottom: 1px solid #DADFE5;
+	padding: 0 20px;
+}
+#twochoice  > div {
+	float: left;
+	height: 42px;
+	line-height: 43px;
+	margin-right: 25px;
+}
+#twochoice .selected {
+	color: #51B7F1;
+	border-bottom: 2px solid #51B7F1;
+}
+#article .left{
+	overflow: auto;
+	margin-left:15px;
+	margin-top:15px;
+	float:left;
+	width: 65%
+}
+#article .left h1{
+	margin-bottom:10px;
+	color:#626a73;
+	font-size:13px;
+}
+#article .left a{
+	font-size:13px;
 	opacity:0.4;
 }
-#twochoice li{
-	margin-top:20px;
-	margin-left:35px;
-	overflow:hidden;
-	float:left;
-	font-size:2.5em;
-}
-#page{
-	color:#51b8f2;
-	padding-bottom:17px;
-	margin-bottom:1.5px;
-	border-bottom:2px solid #51b8f2;
-}
-#answer{
-	margin-bottom:20px;
-}
-#article{
-	width:520px;
-	height:220px;
-	margin-left:35px;
-	margin-right:0px;
-	margin-top:50px;
-	float:left;
-}
-#article h1{
-	margin-bottom:21px;
-	color:#626a73;
-	font-size:2.5em;
-}
-#article a{
-	font-size:1.2em;
+#article .left p{
+	font-size:0.2em;
 	opacity:0.5;
 }
-#article p{
-	font-size:1.7em;
-	opacity:0.5;
-}
-#happy{
-	width:170px;
-	height:170px;
-	margin-left:35px;
-	margin-right:0px;
-	margin-top:75px;
+#article .right{
+	margin-left:15px;
+	margin-top:15px;
 	float:left;
-	display:inline;
+	width: 26%
 }
-#recommond{
-	width:750px;
-	height:130px;
+#footer {
+	position: fixed;
+	bottom: 0;
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	color: #FFF;
+	padding: 10px 0;
 }
+#footer .left {
+	width: 40px;
+	float: left;
+	margin-left: 15px
+}
+#footer .center {
+	float: left;
+	padding-top: 3px;
+	padding-left: 10px;
+	width: 160px;
+}
+#footer .right {
+	margin-left: 230px;
+	margin-right: 15px;
+	margin-top: 4px;
+}
+#footer .line1 {
+	font-size: 14px;
+}
+#footer .line2 {
+	font-size: 14px;
+}
+#footer .button {
+	font-size: 13px;
+	min-width: 70px;
+	line-height: 34px;
+	height: 34px;
+	text-align: center;
+	background: #51B7F1;
+	border-radius: 3px;
+	width: 100%;
+}
+#footer a {
+	float: right;
+	display: block;
+	width: 90%;
+	color: #FFF;
+	font-size: 13px;
+}
+
 
 
 
