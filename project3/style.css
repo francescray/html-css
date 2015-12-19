@@ -1,181 +1,186 @@
+* {
+padding:0;
+margin:0;
+}
 body{
 	margin: 0;
 	line-height: 1.5;
-	font-family:arial;
+	min-width: 1024px;
+	font-family: arial, 'Microsoft Yahei', sans-serif;
 }
-.FrontCover{
-	position: relative;
-	display: block;
+.front-cover{
+	background-image: url(img/2.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat; 
 }
-.FrontCover .Title a{
-	position: absolute;
-	top: 15%;
-	left: 30%;
+.front-cover .blank{
+	height: 35px;
+}
+.front-cover .title {
+	margin: 0px auto ;
+	width: 680px;
+	height: 54px;
 	color:#FFFFFF;
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 36px;
 	z-index: 101;
 	background: rgba(255, 255, 255, 0.15);
 }
-.FrontCover .Search{
-	position: absolute;
-	top:35%;
-	left: 21%;
-	width: 55%;
-}
-.FrontCover .Search .opacity {
-	position: absolute;
-	top: 0px;
-	background: rgba(255, 255, 255, 0.55);
-	width: 100%;
-	height: 160px;
+.front-cover .search{
+	width: 840px;
+	height: 140px;
+	margin: 10px 180px;
+	padding-top: 20px; 
+	background: rgba(255, 255, 255, 0.45);
 	border-radius: 4px;
-	z-index: 101;
 }
-.FrontCover .Search .SearchOption{
-	position: relative;
+.front-cover .search .search-option{
 	color: #000000;
+	padding:7px;
 	font-size: 16px;
-	height: 30px;
-	padding: 20 0px;
-	z-index: 102;
+	font-weight: 200;
+	height: 33px;
+	text-align: center;
 }
-.FrontCover .Search .SearchOption> div {
+.front-cover .search .search-option> div {
 	float: left;
-	height: 30px;
-	line-height: 43px;
-	margin-left: 25px;
-	z-index: 102;
-}
-.FrontCover .Search .SearchOption .Select{
-	background: rgba(255, 255, 255, 0.75);
 	width: 10%;
-	height: 30px;
-	padding-left: 10px;
-	padding-bottom: 5px;
-	z-index: 102;
+	line-height: 33px;
+	margin-left: 15px;
 }
-.FrontCover .Search .left{
-	position: absolute;
-	overflow: auto;
+.front-cover .search .search-option .select{
+	line-height: 33px;
+	width: 10%;
+	text-align: center;
+}
+.front-cover .search .search-option .select .stop{
+	background: rgba(255, 255, 255, 0.75);
+}
+.front-cover .search .left{
 	margin-left:25px;
 	float: left;
 	width: 73%;
-	z-index: 102;
 }
-.FrontCover .Search .center{
-	position: absolute;
+.front-cover .search .left .search-box{
+	width: 101%;
+	height: 53px;
+	border: 0px solid white; 
+	border-radius: 4px;
+}
+.front-cover .search .center{
 	overflow: auto;
 	float: left;
-	left:76%;
-	margin-top:8px;
 	width:8%;
-	z-index: 102;
 }
-.FrontCover .Search .right{
-	position: absolute;
+.front-cover .search .right{
 	overflow: auto;
 	float: left;
-	left:85%;
-	margin-top:8px;
 	width:15%;
-	z-index: 102;
 }
-.ThreeOption{
-	margin-left: 250px;
+.front-cover .blank{
+	height: 20px;
+	widows: 100%;
 }
-.ThreeOption .ReleaseNews {
+.three-option{
+	margin:10px auto;
+	width: 960px;
+	text-align: center;
+}
+.three-option .release-news {
 	padding-left: 40px;
-	width: 22%;
+	width: 25%;
 	margin-right: 0px;
 	margin-left: 0px;
 	float: left;
 }
-.ThreeOption .ReleaseNews .RN{
+.three-option .release-news .rn{
 	height: 42px;
 	line-height: 43px;
 	padding:20px 0px;
 	text-align: center;
 	font-size: 25px;
 }
-.ThreeOption .ReleaseNews .pen{
+.three-option .release-news .pen{
+	background:url(img/8.jpg) no-repeat;
 	position: relative;
-	width:100% ;
+	width:100%;
+	height: 242px;
+}
+.three-option .release-news .pen .photo1{
+	position: relative;
 	text-align:center;
+	margin:auto;
+	padding-top: 32%;
 }
-.ThreeOption .ReleaseNews .pen .photo1{
-	position:absolute;
-	margin:0 auto;
-	top:32%;
-	left:32%;
-}
-.ThreeOption .ReleaseNews .RNDetail{
+.three-option .release-news .rndetail{
 	font-size: 12px;
 }
-.ThreeOption .ReleaseNews .GoRelease{
-	font-size: 16px;
+.three-option .release-news .gorelease{
+	font-size: 14px;
 	color: rgb(92,166,254);
 	text-align: center;
 }
-.ThreeOption .MessageList {
+.three-option .message-list {
 	float: left;
 	padding-left: 40px;
-	width: 22%;
+	width: 25%;
 }
-.ThreeOption .MessageList .ML{
+.three-option .message-list .ml{
 	height: 42px;
 	line-height: 43px;
 	padding:20px 0px;
 	text-align: center;
 	font-size: 25px;
 }
-.ThreeOption .MessageList .list{
+.three-option .message-list .list{
+	background:url(img/9.jpg) no-repeat;
 	position: relative;
-	width:100% ;
+	width:100%;
+	height: 242px;
+}
+.three-option .message-list .list .photo2{
+	position: relative;
 	text-align:center;
+	margin:auto;
+	padding-top: 32%;
 }
-.ThreeOption .MessageList .list .photo2{
-	position:absolute;
-	margin:0 auto;
-	top:31%;
-	left:32%;
-}
-.ThreeOption .MessageList .MLDetail{
+.three-option .message-list .mldetail{
 	font-size: 12px;
 }
-.ThreeOption .MessageList .GoShare{
-	font-size: 16px;
+.three-option .message-list .goshare{
+	font-size: 14px;
 	color: rgb(92,166,254);
 	text-align: center;
 }
-.ThreeOption .PersonalCenter {
+.three-option .personal-center {
 	overflow: auto;
 	padding-left: 40px;
-	width: 22%;
+	width: 25%;
 }
-.ThreeOption .PersonalCenter .PC{
+.three-option .personal-center .pc{
 	height: 42px;
 	line-height: 43px;
 	padding:20px 0px;
 	text-align: center;
 	font-size: 25px;
 }
-.ThreeOption .PersonalCenter .people{
+.three-option .personal-center .people{
+	background:url(img/10.jpg) no-repeat;
 	position: relative;
-	width:100% ;
+	width:100%;
+	height: 242px;
+}
+.three-option .personal-center .people .photo3{
+	position: relative;
 	text-align:center;
+	margin:auto;
+	padding-top: 32%;
 }
-.ThreeOption .PersonalCenter .people .photo3{
-	position:absolute;
-	margin:0 auto;
-	top:32%;
-	left:32%;
-}
-.ThreeOption .PersonalCenter .PCDetail{
+.three-option .personal-center .pcdetail{
 	font-size: 12px;
 }
-.ThreeOption .PersonalCenter .GoManage{
-	font-size: 16px;
+.three-option .personal-center .gomanage{
+	font-size: 14px;
 	color: rgb(92,166,254);
 	text-align: center;
 }
