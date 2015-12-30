@@ -8,6 +8,10 @@ body{
 	text-align: center;
 	font-family: arial, 'Microsoft Yahei', sans-serif;
 }
+ .container {
+ 	margin: 0 auto; 
+ 	width: 960px
+}
 .front-cover{
 	background-image: url(img/2.jpg);
 	background-size: 100%;
@@ -26,17 +30,16 @@ body{
 	font-weight: 600;
 	font-size: 36px;
 }
-
-.front-cover .search{
+.front-cover .container .search{
 	width: 840px;
 	height: 140px;
-	margin: 10px 240px;
+	margin: 10px auto;
 	padding-top: 20px; 
 	background: rgba(255, 255, 255, 0.45);
 	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2DFFFFFF,endcolorstr=#2DFFFFFF);/*后的filter为兼容IE*/
 	border-radius: 4px;
 }
-.front-cover .search .search-option{
+.front-cover .container .search .search-option{
 	color: #000000;
 	padding:7px;
 	font-size: 16px;
@@ -44,59 +47,59 @@ body{
 	height: 33px;
 	text-align: center;
 }
-.front-cover .search .search-option> div {
+.front-cover  .container .search .search-option> div {
 	float: left;
 	width: 10%;
 	line-height: 33px;
 	margin-left: 15px;
 	text-align: center;
 }
-*html .front-cover .search .search-option div{
+*html .front-cover .container .search .search-option div{
 	float: left;
 	width: 10%;
 	line-height: 33px;
 	margin-left: 15px;
 }
-.front-cover .search .search-option .select {
+.front-cover .container .search .search-option .select {
 	line-height: 28px;
 }
-.front-cover .search .search-option .select .stop{
+.front-cover  .container .search .search-option .select .stop{
 	background: rgba(255, 255, 255, 0.75);
 	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4BFFFFFF,endcolorstr=#4BFFFFFF);/*后的filter为兼容IE*/
 	width: 83px;
 }
-.front-cover .search .search-option .select .sbottom{
+.front-cover  .container .search .search-option .select .sbottom{
 	line-height: 5px;
 }
-*html .front-cover .search .search-option .select .sbottom{
+*html .front-cover  .container .search .search-option .select .sbottom{
 	margin-left: 50%;
 }
-.front-cover .search .left{
+.front-cover  .container .search .left{
 	margin-left:25px;
 	float: left;
 	display:inline;
 	width: 73%;
 }
-.front-cover .search .left .search-box{
+.front-cover  .container .search .left .search-box{
 	padding-left: 15px;
 	width: 101%;
 	height: 53px;
 	border: 0px solid white; 
 	border-radius: 4px;
 }
-.front-cover .search .center{
+.front-cover  .container .search .center{
 	overflow: auto;
 	float: left;
 	display:inline;
 	width:8%;
 }
-.front-cover .search .right{
+.front-cover  .container .search .right{
 	overflow: auto;
 	float: left;
 	display:inline;
 	width:15%;
 }
-.front-cover .blank{
+.front-cover  .container .blank{
 	height: 20px;
 	widows: 100%;
 }
@@ -105,14 +108,10 @@ body{
 	width: 960px;
 	text-align: center;
 }
-
 .three-option .release-news {
-	padding-left: 40px;
-	width: 25%;
-	margin-right: 0px;
-	margin-left: 0px;
-	float: left;
-	display:inline;
+	width: 253px;
+	padding: 0px 8px;
+	display:inline-block;
 }
 .three-option .release-news .rn{
 	height: 42px;
@@ -123,15 +122,13 @@ body{
 }
 .three-option .release-news .pen{
 	background:url(img/8.jpg) no-repeat;
-	position: relative;
 	width:100%;
 	height: 242px;
 }
 .three-option .release-news .pen .photo1{
-	position: relative;
 	text-align:center;
 	margin:auto;
-	padding-top: 32%;
+	padding-top: 31%;
 }
 .three-option .release-news .rndetail{
 	font-size: 12px;
@@ -142,10 +139,9 @@ body{
 	text-align: center;
 }
 .three-option .message-list {
-	float: left;
-	display:inline;
-	padding-left: 40px;
-	width: 25%;
+	display:inline-block;
+	width: 253px;
+	padding: 0px 8px;
 }
 .three-option .message-list .ml{
 	height: 42px;
@@ -156,15 +152,13 @@ body{
 }
 .three-option .message-list .list{
 	background:url(img/9.jpg) no-repeat;
-	position: relative;
 	width:100%;
 	height: 242px;
 }
 .three-option .message-list .list .photo2{
-	position: relative;
 	text-align:center;
 	margin:auto;
-	padding-top: 32%;
+	padding-top: 31%;
 }
 .three-option .message-list .mldetail{
 	font-size: 12px;
@@ -175,9 +169,9 @@ body{
 	text-align: center;
 }
 .three-option .personal-center {
-	overflow: auto;
-	padding-left: 40px;
-	width: 25%;
+	display:inline-block;
+	width: 253px;
+	padding: 0px 8px;
 }
 .three-option .personal-center .pc{
 	height: 42px;
@@ -188,15 +182,13 @@ body{
 }
 .three-option .personal-center .people{
 	background:url(img/10.jpg) no-repeat;
-	position: relative;
 	width:100%;
 	height: 242px;
 }
 .three-option .personal-center .people .photo3{
-	position: relative;
 	text-align:center;
 	margin:auto;
-	padding-top: 32%;
+	padding-top: 31%;
 }
 .three-option .personal-center .pcdetail{
 	font-size: 12px;
