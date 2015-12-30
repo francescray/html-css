@@ -5,7 +5,7 @@ margin:0;
 body{
 	margin: 0;
 	line-height: 1.5;
-	min-width: 1024px;
+	text-align: center;
 	font-family: arial, 'Microsoft Yahei', sans-serif;
 }
 .front-cover{
@@ -17,21 +17,23 @@ body{
 	height: 35px;
 }
 .front-cover .title {
+	background: rgba(255, 255, 255, 0.15);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#0FFFFFFF,endcolorstr=#0FFFFFFF);/*后的filter为兼容IE*/
 	margin: 0px auto ;
-	width: 680px;
+	width: 540px;
 	height: 54px;
 	color:#FFFFFF;
 	font-weight: 600;
 	font-size: 36px;
-	z-index: 101;
-	background: rgba(255, 255, 255, 0.15);
 }
+
 .front-cover .search{
 	width: 840px;
 	height: 140px;
-	margin: 10px 180px;
+	margin: 10px 240px;
 	padding-top: 20px; 
 	background: rgba(255, 255, 255, 0.45);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#2DFFFFFF,endcolorstr=#2DFFFFFF);/*后的filter为兼容IE*/
 	border-radius: 4px;
 }
 .front-cover .search .search-option{
@@ -47,21 +49,36 @@ body{
 	width: 10%;
 	line-height: 33px;
 	margin-left: 15px;
-}
-.front-cover .search .search-option .select{
-	line-height: 33px;
-	width: 10%;
 	text-align: center;
+}
+*html .front-cover .search .search-option div{
+	float: left;
+	width: 10%;
+	line-height: 33px;
+	margin-left: 15px;
+}
+.front-cover .search .search-option .select {
+	line-height: 28px;
 }
 .front-cover .search .search-option .select .stop{
 	background: rgba(255, 255, 255, 0.75);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4BFFFFFF,endcolorstr=#4BFFFFFF);/*后的filter为兼容IE*/
+	width: 83px;
+}
+.front-cover .search .search-option .select .sbottom{
+	line-height: 5px;
+}
+*html .front-cover .search .search-option .select .sbottom{
+	margin-left: 50%;
 }
 .front-cover .search .left{
 	margin-left:25px;
 	float: left;
+	display:inline;
 	width: 73%;
 }
 .front-cover .search .left .search-box{
+	padding-left: 15px;
 	width: 101%;
 	height: 53px;
 	border: 0px solid white; 
@@ -70,11 +87,13 @@ body{
 .front-cover .search .center{
 	overflow: auto;
 	float: left;
+	display:inline;
 	width:8%;
 }
 .front-cover .search .right{
 	overflow: auto;
 	float: left;
+	display:inline;
 	width:15%;
 }
 .front-cover .blank{
@@ -86,12 +105,14 @@ body{
 	width: 960px;
 	text-align: center;
 }
+
 .three-option .release-news {
 	padding-left: 40px;
 	width: 25%;
 	margin-right: 0px;
 	margin-left: 0px;
 	float: left;
+	display:inline;
 }
 .three-option .release-news .rn{
 	height: 42px;
@@ -122,6 +143,7 @@ body{
 }
 .three-option .message-list {
 	float: left;
+	display:inline;
 	padding-left: 40px;
 	width: 25%;
 }
@@ -187,6 +209,7 @@ body{
 #footer {
 	overflow: auto;
 	background: rgb(47, 109, 183);
+	background:#2f6db7;
 	width: 100%;
 	color: #FFF;
 	padding: 10px 0;
