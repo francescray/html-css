@@ -41,7 +41,8 @@ body{
 }
 .front-cover .container .search .search-option{
 	color: #000000;
-	padding:7px;
+	padding:3px;
+	padding-left: 8px;
 	font-size: 16px;
 	font-weight: 200;
 	height: 33px;
@@ -54,25 +55,19 @@ body{
 	margin-left: 15px;
 	text-align: center;
 }
-*html .front-cover .container .search .search-option div{
-	float: left;
-	width: 10%;
-	line-height: 33px;
-	margin-left: 15px;
-}
 .front-cover .container .search .search-option .select {
-	line-height: 28px;
-}
-.front-cover  .container .search .search-option .select .stop{
 	background: rgba(255, 255, 255, 0.75);
 	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4BFFFFFF,endcolorstr=#4BFFFFFF);/*后的filter为兼容IE*/
-	width: 83px;
 }
-.front-cover  .container .search .search-option .select .sbottom{
-	line-height: 5px;
+.front-cover .container .search .arrow{
+		height: 7px;
+		text-align:center;
 }
-*html .front-cover  .container .search .search-option .select .sbottom{
-	margin-left: 50%;
+.front-cover .container .search .arrow .sbottom{
+	position: absolute;
+	width:25px;
+	height: 7px;
+	background:url(img/03.jpg) no-repeat;
 }
 .front-cover  .container .search .left{
 	margin-left:25px;
@@ -122,11 +117,11 @@ body{
 }
 .three-option .release-news .pen{
 	background:url(img/8.jpg) no-repeat;
+	background-position: center;
 	width:100%;
 	height: 242px;
 }
 .three-option .release-news .pen .photo1{
-	text-align:center;
 	margin:auto;
 	padding-top: 31%;
 }
@@ -152,11 +147,12 @@ body{
 }
 .three-option .message-list .list{
 	background:url(img/9.jpg) no-repeat;
+	background-position: center;
 	width:100%;
 	height: 242px;
+	text-align:center;
 }
 .three-option .message-list .list .photo2{
-	text-align:center;
 	margin:auto;
 	padding-top: 31%;
 }
@@ -182,6 +178,7 @@ body{
 }
 .three-option .personal-center .people{
 	background:url(img/10.jpg) no-repeat;
+	background-position: center;
 	width:100%;
 	height: 242px;
 }
