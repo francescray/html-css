@@ -1,0 +1,141 @@
+@@include('include/header.html')
+<body id="goods">
+	<header>
+ 	   <div class="logo">约见{{v.nickname}}</div>
+	</header>
+	<div class="homepage">
+		<div class="bigpicture" :style="{ backgroundImage: 'url(' + v.psylistpic + '@750w_420h_90Q_0e.png' + ')' }">
+			<div class="smallpicture">
+				<img :src="v.headportrait" width="100%" height="100%"/>
+			</div>
+		</div>
+		<div class="nickname">{{v.nickname}}</div>
+		<div class="location">{{v.goods[0].cityname}}</div>
+		<div class="meetnumber">{{v.goods[0].buyernum}}人约见过</div>
+	</div>
+	<template v-for="goods in v.goods">
+		<a class="block" href="goods_item.html?psyid={{ psyid }}&citycode={{ citycode }}&otype={{ goods.otype }}&oid={{goods.oid}}">
+			<div class="goods-items">
+				<div>
+					<div class="once-money">{{goods.price}}元/次</div>
+					<div class="goods-star">
+						<div class="goods-starnon">
+							<div class="goods-starall" style="width: {{ goods.score | score }}%" ></div>
+						</div>
+						<div class="goods-score">{{ goods.score | toFixed 1 }}</div>
+					</div>
+				</div>
+				<div class="goods-title">{{goods.name}}</div>
+				<div class="goods-content">{{goods.shortdesc}}</div>
+				<div class="goods-time">{{goods.durationdesc}}/每次</div>
+				<div class="goods-readmore">查看全部</div>
+			</div>
+		</a>
+	</template>
+	<template v-if="v.remark.nickname">
+		<div class="space-room">
+			<div class="head-portrait">
+				<img :src="v.remark.headportrait" width="44" height="44" />
+			</div>
+			<div class="room-name">{{v.remark.nickname}}</div>
+			<div class="goods-star">
+				<div class="goods-starnon">
+					<div class="goods-starall" style="width: {{ v.remark.score | score }}%" ></div>
+				</div>
+				<div class="goods-score">{{ v.remark.score | toFixed 1 }}</div>
+			</div>
+			<div class="impression">{{v.remark.content}}</div>
+			<div class="morecomment"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多评论 </a></div>
+		</div>
+	</template>
+	<div class="about">
+		<div class="about-about">关于</div>
+		<div class="about-portrait">
+			<img :src="v.headportrait" width="64" height="64" />
+		</div>
+		<div class="about-name">{{v.nickname}}</div>
+		<div class="about-introduce">{{v.officialtitle}}</div>
+	</div>
+	<div class="waytoconnect">
+		<div class="howtoconnect">如何约见InMe咨询师</div>
+		<div class="steps">
+			<div class="first">发起约见</div>
+			<div class="steparrow"></div>
+			<div class="second">支付费用</div>
+			<div class="steparrow"></div>
+			<div class="third">协商时间地点</div>
+			<div class="steparrow"></div>
+			<div class="fourth">双方见面</div>
+		</div>
+	</div>
+	<div class="related-expert">
+		<div class="related-meet">相关约见</div>
+		<template v-for="relatedgoods in v.relatedgoods">
+			<a href="goods.html?psyid={{ relatedgoods.psyid }}" class="block">
+				<div class="related-person">
+					<div class="expert-protrait">
+						<img :src="relatedgoods.headportrait" width="44px" height="44px">
+					</div>
+					<div class="expert-detail">
+						<div class="expert-name">{{relatedgoods.nickname}}</div>
+						<div class="expert-time">{{relatedgoods.durationdesc}}/次</div>
+						<div class="expert-number">{{relatedgoods.buyernum}}人约见过</div>
+					</div>
+					<div class="clear"></div>
+					<div class="expert-papertitle">{{relatedgoods.name}}</div>
+					<div class="expert-papercontent">{{relatedgoods.shortdesc}}</div>
+				</div>
+			</a>
+		</template>
+	</div>
+	@@include('include/footer_result.html')
+<script type="application/javascript">
+	var psyid = getUrlParam('psyid');
+	var citycode = getUrlParam('citycode');
+
+	Vue.filter('score', function(score) {
+		return parseInt(score/2)*20;
+	});
+
+	var vm = new Vue({
+		el: '#goods',
+		data : {
+			v : {},
+			psyid : psyid,
+			citycode : citycode
+		}
+	});
+
+	var get={
+		psyid : psyid,
+		citycode: citycode
+	};
+
+	$.getJSON(url('goods/shareFetchGoods'), get, function(data){
+		if (data.code == '0') {
+			vm.v = data.data;
+			vm_title.title = '约见' + vm.v.nickname;	
+		}
+		wx_share();
+	});
+    function wx_share() {
+    	var share;
+	    var title = 'InMe都市轻心理约见服务';
+	    var desc ;
+	    if(typeof(vm.v.nickname)!== 'undefined'){
+        	if (vm.v.nicknamec !== null || vm.v.nickname !== '') {
+	        	desc = '在InMe约见'+ vm.v.nickname;
+	        }else{
+	        	desc = title;
+	        }
+	    }
+	    share = {
+	        title : title,
+	        desc : desc,
+	        img : vm.v.psylistpic
+	    };
+	    initWechat(share);
+	}
+</script>
+</body>
+</html>

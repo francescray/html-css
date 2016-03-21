@@ -1,0 +1,146 @@
+#article .page1{
+	width: 100%;
+}
+#article .content {
+    margin: 0 15px;
+    color: #333;
+    margin-bottom: 15px;
+}
+#article .content a {
+    display: block;
+    overflow: hidden;
+}
+#article .page1 .article-title {
+    margin:15px;
+    font-size:21px;
+    line-height:150%;
+    font-weight:bold;
+    color:#333333;
+    text-align:left;
+}
+#article .page1 .title-page{
+    height: 125px;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius: 3px;
+}
+#article .page1 .titlepage-mean{
+	font-size: 12.5px;
+	background:rgb(249,249,249);
+    overflow: hidden;
+    line-height:156%;
+    color:rgb(89,89,89);
+    padding:20px 22px;
+}
+#article .page1 .page-content{
+	margin-top:23px;
+	font-size: 14px;
+    line-height:150%;
+    color:#333333;
+    text-align:left;
+}
+#article .divider-bar{
+	height: 12px;
+	background: rgb(230,230,230);
+}
+#article .recommend-read{
+	width: 100%;
+}
+#article .recommend-read .recommend{
+	margin:15px 15px;
+    font-size:15px;
+    line-height:140%;
+    color:rgb(41,41,41);
+    text-align:left;
+}
+#article .recommend-read .content{
+    margin:0 12px 15px 12px;
+}
+#article .recommend-read  .content .article_bg{
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+    margin-top: 18px;
+    height: 131px;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius: 3px;
+}
+#article .recommend-read  .content .article_bg .article_author_pic{
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    height: 26px;
+    width: 26px;
+}
+#article .recommend-read  .content .article_bg .article_author_pic img {
+    height:26px;
+    width:26px;
+    border-radius:50%;
+}
+#article .recommend-read  .content .article_title{
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px 0 13px 0;
+}
+#article .recommend-read  .content .article_content{
+    margin-top: 12px;
+    font-size:14px ;
+    color: rgb(141,147,154);
+    line-height: 20px;
+    margin:0 26px;
+}
+#article .recommend-read .content .article_label{
+    font-size: 11px;
+    color: rgb(164,169,175);
+    width: 40%;
+    float: left;
+    margin-top: 12px;
+}
+#article .recommend-read  .content .article_watchnum{
+    font-size: 11px;
+    color: rgb(164,169,175);
+    width: 10%;
+    float: right;
+    margin-top: 12px;
+    padding-left:20px;
+    background: url('../img/static/eye.png') no-repeat left;
+    background-size: 17px 12px;
+}
+#article .recommend-read .ext-recommend{
+    line-height: 44px;
+    margin:0 12px;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 1px solid rgb(230,230,230);
+}
+#article .recommend-read .ext-recommend:last-child {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(230,230,230);
+}
+#article .comment .reply-number{
+    margin:17px 12px 0 12px;
+    font-size: 15px;
+    line-height:140%;
+    color:rgb(41,41,41);
+}
+#article .comment .reply-content{
+    margin:15px 10px 0 43px;
+    padding-bottom:22px;
+    font-size: 12.5px;
+    display: block;
+    line-height:156%;
+    color:rgb(89,89,89);
+    border-bottom: solid 1px #D2D2D2;
+}
+#article .onecomment .title{
+    float: none;
+    text-align: center;
+    font-size:9px;
+    background:rgb(81,184,242);
+}

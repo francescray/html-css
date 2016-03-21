@@ -1,0 +1,66 @@
+@@include('include/header.html')
+<body id="article-list">
+	<header>
+    	<div class="logo"><a href="" v-if="v[0].classname">{{ v[0].classname }} </a></div>
+	</header>
+	<div class="one-article">
+		<template v-for="article in v">
+		<div class="content">
+			<a href="article.html?id={{ article.id }}" class="block">
+				<div class="article_bg" :style="{ backgroundImage: 'url(' + article.img + '@690w_262h_90Q_0e' + ')' }">
+					<div class="article_author_pic">
+						<img :src="article.headportrait" width="25px" height="26px">
+					</div>
+				</div>
+				<div class="article_title">{{article.title}}</div>
+				<div class="article_content">{{article.articledesc}}</div>
+				<div class="article_label">{{article.classname}}</div>
+				<div class="article_watchnum">{{article.viewnum}}</div>
+				<div class="article_blank"></div>
+			</a>
+		</div>
+		</template>
+	</div>
+
+	@@include('include/footer_result.html')
+
+
+<script type="application/javascript">
+   	var vm	=new Vue({
+		el : '#article-list',
+		data : {
+			v : []
+		}
+	});
+	var get = {
+		classid : getUrlParam('classid')
+	};
+	$.getJSON(url('homepage/shareFetchArticleByClass'), get, function(data){
+		if (data.code == '0'){
+			vm.v = data.data;
+			vm_title.title = vm.v[0].classname;
+		}
+		wx_share();
+	});
+    
+    function wx_share() {
+    	var share;
+	    var title = 'InMe心迹-'+vm.v[0].classname;
+	   	var desc ;
+	    if(typeof(vm.v[0].classname)!== 'undefined'){
+        	if (vm.v[0].classname !== null || vm.v[0].classname !== '') {
+	        	desc = vm.v[0].classname;
+	        }else{
+	        	desc = title;
+	        }
+	    }
+	    share = {
+	        title : title,
+	        desc : vm.v[0].classname,
+	        img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png'
+	    };
+	    initWechat(share);
+	}
+</script>
+</body>
+</html>

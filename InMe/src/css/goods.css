@@ -1,0 +1,384 @@
+#goods{
+	background: rgb(244,244,244);
+}
+#goods .homepage {
+	overflow: hidden;
+}
+#goods .homepage .bigpicture{
+	height: 210px;
+	position: relative;
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+	margin-bottom: 32.5px;
+}
+#goods .homepage .bigpicture .smallpicture{
+	position: absolute;
+	bottom: -30px;
+	height:64px;
+	width:64px;
+	border-radius: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border: solid 1px #ECEBEC;
+	padding: 1px;
+}
+#goods .smallpicture > img {
+	border-radius: 50%;
+}
+#goods .homepage .nickname{
+	padding-top: 5px;
+	font-size: 14px;
+	text-align: center;
+	line-height:14px;
+	color:rgb(97,105,115);
+}
+#goods .homepage .location{
+	height:12.5px;
+	float: left;
+	padding-left: 13px;
+	margin: 15px 0px 10px 15px;
+	font-size: 11px;
+	background: url('../img/static/location.png') no-repeat left;
+	background-size: 9px 12.5px;
+	line-height:100%;
+	color:rgb(163,169,175);
+	overflow: hidden;
+}
+#goods .homepage .meetnumber{
+	height:12.5px;
+	padding-left: 15px;
+	margin:15px 15px 10px 0px;
+	font-size: 11px;
+	background: url('../img/static/meetnumber.png') no-repeat left;
+	background-size: 10.5px 12.5px;
+	float: right;
+	line-height:100%;
+	color:rgb(163,169,175);
+}
+#goods .goods-items{
+	margin:10px 10px 0px 10px;
+	background: rgb(254,254,255);
+	overflow: hidden;
+}
+#goods .goods-items > div{
+	overflow: hidden;
+}
+#goods .goods-items .once-money{
+	font-size: 9px;
+	color: #FFF;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	margin:16px 12px 0 12px;
+	float: left;
+	background: rgb(81,184,242);
+	border-radius: 10px;
+	padding: 0 6px;
+}
+#goods .goods-items .goods-star{
+	margin:16px 12px 0 12px;
+	width:110px;
+	height: 15px;
+	float: right;
+}
+#goods .goods-items .goods-star .goods-starnon{
+	float: left;
+	height: 15px;
+	width:88px;
+	background:url('../img/static/star-none.png') space;
+	background-size:15px 15px;
+	margin:0;
+}
+#goods .goods-items .goods-star .goods-starnon .goods-starall{
+	height:15px;
+	background:url('../img/static/star-all.png') space;
+	background-size:15px 15px;
+	margin:0;
+}
+#goods .goods-items .goods-star .goods-score{
+	width:20px;
+	line-height: 15px;
+	color:rgb(163,169,175);
+	font-size: 13px;
+	margin: 0;
+	float: right;
+}
+#goods .goods-items .goods-title{
+	font-size:16px ;
+	color: rgb(113,120,128);
+	margin:15px 12px 10px 12px;
+	line-height:20px;
+	color:rgb(113,119,127);
+}
+#goods .goods-items .goods-content{
+	font-size:14px ;
+	color: rgb(141,147,154);
+	line-height:164%;
+	margin:0px 12px;
+}
+#goods .goods-items .goods-time{
+	font-size: 11px;
+	color: rgb(164,169,175);
+	margin: 4px 12px 0;
+	padding:18px 15px 18px 15px;
+	float: left;
+	background: url('../img/static/clock.png') no-repeat left center;
+	background-size: 10.5px 10.5px;
+	color:rgb(164,169,174);
+}
+#goods .goods-items .goods-readmore{
+	font-size: 11px;
+	color: rgb(164,169,175);
+	margin: 4px 15px 0;
+	padding:18px 12px 18px 12px;
+	float: right;
+	background: url('../img/static/rightarrow.png') no-repeat right;
+	background-size: 5px 7.5px;
+	color:rgb(164,169,174);
+}
+#goods .goods-items .goods-readmore a{
+	color:rgb(164,169,174);
+}
+#goods .space-room{
+	margin:0px 10px;
+	margin-top: 10px;
+	overflow: hidden;
+	background: rgb(254,254,255);
+	padding-top: 15px;
+	padding-bottom: 18px;
+}
+#goods .space-room .head-portrait{
+	height: 44px;
+	width: 44px;
+	margin:0 auto;
+}
+#goods .space-room .head-portrait img {
+	border-radius: 50%;
+}
+#goods .space-room .room-name{
+	font-size: 14px;
+	margin:0px auto;
+	margin-top: 10px;
+	width: 100px;
+	line-height:143%;
+	color:rgb(111,119,127);
+	text-align: center;
+}
+#goods .space-room .goods-star{
+	font-size: 13px;
+	color: rgb(164,169,175);
+	margin:9px auto;
+	margin-bottom: 20px;
+	width:130px;
+	height: 15px;
+	line-height: 100%;
+	text-align: center;
+}
+#goods .space-room .goods-star .goods-starnon{
+	float: left;
+	height: 15px;
+	width:88px;
+	background:url('../img/static/star-none.png') space;
+	background-size:15px 15px;
+	margin:0;
+}
+#goods .space-room .goods-star .goods-starnon .goods-starall{
+	height:15px;
+	background:url('../img/static/star-all.png') space;
+	background-size:15px 15px;
+	margin:0;
+}
+#goods .space-room .impression{
+	font-size: 13px;
+	color: rgb(141,147,154);
+	margin:0 12px;
+	line-height:162%;
+	color:rgb(141,147,153);
+}
+#goods .space-room .morecomment{
+	font-size: 12px;
+	width: 119px;
+	height: 33px;
+	background-color:rgb(81,183,241);
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 25px;
+	border-radius: 20px;
+	line-height:33px;
+	color:rgb(255,255,255);
+}
+#goods .space-room .morecomment a{
+	color:rgb(255,255,255);
+}
+#goods .about{
+	margin:0px 10px;
+	margin-top: 10px;
+	background: rgb(254,254,255);
+}
+#goods .about .about-about{
+	font-size: 12px;
+	padding-top: 15px;
+	margin-left: 12px;
+	line-height:163%;
+	color:rgb(111,119,127);
+}
+#goods .about .about-portrait{
+	height: 64px;
+	width: 64px;
+	margin:0 auto;
+}
+#goods .about .about-portrait img {
+	border-radius: 50%;
+}
+#goods .about .about-name{
+	font-size: 14px;
+	color: rgb(98,106,115);
+	width:100px;
+	margin:0 auto;
+	margin-top: 7.5px;
+	margin-bottom: 30px;
+	text-align: center;
+	line-height:143%;
+	color:rgb(97,105,115);
+}
+#goods .about .about-introduce{
+	font-size: 13px;
+	line-height: 156%;
+	margin-left:12px;
+	margin-right: 12px;
+	padding-bottom: 20px;
+	color:rgb(127,127,127);
+}
+#goods .waytoconnect{
+	margin:10px 10px 0px 10px;
+	background: rgb(254,254,255);
+}
+#goods .waytoconnect .howtoconnect{
+	padding-top: 8px;
+	margin: 15px 0 0 12px;
+	font-size: 12px;
+	line-height:167%;
+	color:rgb(111,119,127);
+}
+#goods .waytoconnect .steps{
+	font-size: 10px;
+	margin-top: 15px;
+	text-align: center;
+	color:rgb(127,127,127);
+}
+#goods .waytoconnect .steps > div {
+	height: 35px;
+}
+#goods .waytoconnect .steps .steparrow{
+	width: 2%;
+	background: url('../img/static/steparrow.png') no-repeat center;
+	background-size: 6px 44px;
+	display: inline-block;
+}
+#goods .waytoconnect .steps .first{
+	width: 20%;
+	min-width: 55px;
+	padding-top: 32px;
+	background: url('../img/static/connectfirst.png') no-repeat top;
+	background-size: 19px 19px;
+	display: inline-block;
+	text-align: center;
+}
+#goods .waytoconnect .steps .second{
+	width: 20%;
+	min-width: 55px;
+	padding-top: 32px;
+	background: url('../img/static/connectsecond.png') no-repeat top;
+	background-size: 16px 19px;
+	display: inline-block;
+	text-align: center;
+}
+#goods .waytoconnect .steps .third{
+	width: 25%;
+	min-width: 80px;
+	padding-top: 32px;
+	background: url('../img/static/connectthird.png') no-repeat top center;
+	background-size: 21px 19px;
+	display: inline-block;
+	text-align: center;
+}
+#goods .waytoconnect .steps .fourth{
+	width: 20%;
+	min-width: 55px;
+	padding-top: 32px;
+	background: url('../img/static/connectfourth.png') no-repeat top;
+	background-size: 19px 19px;
+	display: inline-block;
+	text-align: center;
+}
+#goods .related-expert {
+	margin-bottom: 75px;
+}
+#goods .related-expert .related-meet{
+	margin: 12px 22px 10px 22px;
+	line-height: 33px;
+	font-size: 12px;
+	line-height:167%;
+	color:rgb(111,119,127);
+}
+#goods .related-expert .related-person {
+	overflow: hidden;
+	margin:0px 10px;
+	background: rgb(254,254,255);
+	border-bottom: solid 1px rgb(230,230,230);
+}
+#goods .related-expert .related-person .expert-protrait{
+	margin:0 15px;
+	padding-top: 16px;
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+	float: left;
+}
+#goods .related-expert .related-person .expert-protrait img {
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+}
+#goods .related-expert .related-person .expert-detail{
+	float: left;
+	overflow: hidden;
+}
+#goods .related-expert .related-person .expert-detail .expert-name{
+	margin-top: 16px;
+	font-size: 14px;
+	color: rgb(98,106,115);
+	height: 26px;
+}
+#goods .related-expert .related-person .expert-detail .expert-time{
+	font-size: 11px;
+	color: rgb(164,169,175);
+	background: url('../img/static/clock.png') no-repeat left top 4px;
+	background-size: 10.5px 10.5px;
+	padding-left: 15px;
+	float: left;
+}
+#goods .related-expert .related-person .expert-detail .expert-number{
+	margin-left: 25px;
+	font-size: 11px;
+	color: rgb(164,169,175);
+	background: url('../img/static/meetnumber.png') no-repeat left top 3px;
+	background-size: 10.5px 12.5px;
+	padding-left: 15px;
+	float: left;
+}
+#goods .related-expert .related-person .expert-papertitle{
+	font-size: 16px;
+	margin:10px 12px 10px 12px;
+	line-height:150%;
+	color:rgb(81,183,241);
+}
+#goods .related-expert .related-person .expert-papercontent{
+	font-size: 14px;
+	margin:0 12px 25px 12px;
+	line-height:164%;
+	color:rgb(141,147,153);
+}

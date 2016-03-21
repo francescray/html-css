@@ -1,0 +1,176 @@
+@@include('include/header.html')
+<body id="userpage">
+    <div class="userpage-header" :style="{ backgroundImage: 'url(' + v1.psyback + '@750w_396h_90Q_0e' + ')' }">
+        <div class="portrait">
+            <img :src="v1.headportrait">
+            <div class="grade">V{{v1.userlevel}}</div>
+        </div>
+        <div class="nickname">{{v1.nickname}}</div>
+        <div class="title {{ v1.usertype | userTypeclass }}">{{ v1.usertype | userTypename }}</div>
+    </div>
+    <ul class="popularity">
+        <li><div class="pop">{{v1.followernum}}</div><div class="num">粉丝</div></li>
+        <li><div class="pop">{{v1.followingnum}}</div><div class="num">关注</div></li>
+    </ul>  
+    <div class="detail">
+        <div class="abstract">{{v1.officialtitle}}</div>
+        <ul class="page-label">
+            <li v-for="la in lab.length" class="label1">{{ lab[la] }}</li>
+        </ul>
+        <a href="userpage_detail.html?uid={{v1.uid}}"><div class="detail-more">更多</div></a>
+    </div>
+    <div class="search-option">
+        <div class="select">文章</div>
+        <div>帖子与问答</div>
+        <div>约见</div>
+    </div>
+    <div class="article">
+    <template v-for="article in v2">
+        <div class="content"><a href="article.html?id={{ article.id }}" >
+            <div class="article_bg" :style="{ backgroundImage: 'url(' + article.img + '@690w_262h_90Q_0e' + ')' }">
+                <div class="article_author_pic">
+                    <img :src="v1.headportrait" width="26px" height="26px">
+                </div>
+            </div>
+            <div class="article_title">{{ article.title }}</div>
+            <div class="article_content">{{ article.articledesc }}</div>
+            <div class="article_label">{{ article.classname }}</div>
+            <div class="article_watchnum">{{ article.viewnum }}</div>
+            </a>
+        </div>
+    </template>
+    </div>
+    <div class="postanswer" style="display: none">
+        <template v-for="postanswer in v3">
+        <div v-if="postanswer.otype==5"  class="post">
+        <a href="topic.html?id={{postanswer.oid }}" >
+            <div class="topic-title">{{postanswer.title}}</div>
+            <div class="topic-content">{{postanswer.content}}</div>
+            <div v-if="postanswer.img1" class="topic-picture">
+                <div  v-if="postanswer.img1" :style="{ backgroundImage : 'url(' + postanswer.img1 + '@220w_220h_90Q_0e' +')' }"></div>
+                <div  v-if="postanswer.img2" :style="{ backgroundImage : 'url(' + postanswer.img2 + '@220w_220h_90Q_0e' +')' }"></div>
+                <div  v-if="postanswer.img3" :style="{ backgroundImage : 'url(' + postanswer.img3 + '@220w_220h_90Q_0e' +')' }">
+                    <div v-if="postanswer.img4" class="picnum">4张</div>
+                </div>
+            </div> </a>
+            <div class="topic-label">#{{postanswer.topicname}}</div>
+            <div class="reply">{{postanswer.replynum}}</div>        
+            <div class="good">{{postanswer.likenum}}</div>
+        </div>
+        <div v-if="postanswer.otype==3" class="topic-reply">
+            <div class="reply-content"><a>回复:</a>&nbsp;&nbsp;{{postanswer.replytargetcontent}}</div>
+        </div>
+        <div v-if="postanswer.otype==3" class="q-and-a">
+        <a href="topic_question.html?id={{postanswer.replytargetoid }}" >
+            <div class="qa-title">{{postanswer.replytargettitle}}</div>
+            <div class="qa-content">  {{postanswer.content}} </div>
+            <ul class="qa-label">
+                <li v-for="tag in postanswer.tags" class="label">{{tag.name}}</li>
+            </ul>
+            <div class="reply">{{postanswer.replynum}}</div>        
+            <div class="watch">{{replynum.viewnum}}</div>
+        </div>
+        </a>
+        </template>
+    </div>
+    <div class="meet" style="display: none">
+        <template v-for="meet in v4">    
+        <a href="goods.html?psyid={{v1.uid }}&citycode={{meet.citycode}}" >
+        <div class="meet-article">
+            <div class="meet-title">{{meet.name}}</div>
+            <div class="meet-conent">{{meet.shortdesc}}</div>
+            <div class="meet-time">{{meet.durationdesc}}/次</div>
+            <div class="meet-number">{{meet.buyernum}}人约见过</div>
+        </div>
+        </a>
+        </template>
+    </div>
+    @@include('include/footer_result.html')
+    <script type="text/javascript">
+        $('#userpage .search-option > div').click(function() {
+            if (! $(this).hasClass('select')) {
+                $('#userpage .search-option > div').removeClass('select');
+                $(this).addClass('select');
+
+                var text = $(this).text();
+                if (text == '文章') {
+                    $('.article').show();
+                    $('.postanswer').hide();
+                    $('.meet').hide();
+                } if (text == '帖子与问答') {
+                    $('.article').hide();
+                    $('.postanswer').show();
+                    $('.meet').hide();
+                }
+                else if (text == '约见'){
+                    $('.postanswer').hide();
+                    $('.article').hide();
+                    $('.meet').show();
+                } 
+            }
+        })
+    </script>
+    <script type="application/javascript">
+    vm = new Vue({
+        el : '#userpage',
+        data : {
+            v1 : {},
+            v2 : [],
+            v3 : [],
+            v4 : [],
+            l  : []
+        },
+        computed : {
+            lab :function() {
+                var la = this.v1.specializationnames;
+                var result=la.split(",");
+                return result;
+            }
+        }
+    });
+    var get = {
+        uid : getUrlParam('uid')
+    };
+    $.getJSON(url('userpage/shareFetchUserInfo'), get, function(data) {
+        if (data.code == '0') {
+            vm.v1 = data.data;
+            vm_title.title = 'InMe问答-'+vm.v1.nickname;
+        }
+        wx_share();
+    });
+    $.getJSON(url('userpage/shareFetchArticles'), get, function(data) {
+        if (data.code == '0') {
+            vm.v2 = data.data;
+        }
+    });
+    $.getJSON(url('userpage/ShareFetchMixedContents'), get, function(data) {
+        if (data.code == '0') {
+            vm.v3 = data.data;
+        }
+    });
+    $.getJSON(url('userpage/shareFetchGoods'), get, function(data) {
+        if (data.code == '0') {
+            vm.v4 = data.data;
+        }
+    });
+    function wx_share() {
+        var share;
+        var title1='InMe咨询师-'+vm.v1.nickname;
+        var desc1 ;
+        if(typeof(vm.v1.officialtitle)!== 'undefined'){
+            if (vm.v1.officialtitle !== null || vm.v1.officialtitle !== '') {
+                desc1 = vm.v1.officialtitle;
+            }else{
+                desc1 = title1;
+            }
+        }
+        share = {
+            title : title1,
+            desc : desc1,
+            img : vm.v1.headportrait
+        };
+        initWechat(share);
+    }
+    </script>
+</body>
+</html>

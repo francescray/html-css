@@ -1,0 +1,384 @@
+#userpage .userpage-header{
+	height: 198px;
+	position: relative;
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+#userpage .userpage-header .portrait{
+	position: absolute;
+	bottom: -31px;
+	left:18px;
+	width: 62.5px;
+	height: 62.5px;
+}
+#userpage .userpage-header .portrait img{
+	width: 62.5px;
+	height: 62.5px;
+	border-radius: 50%;
+}
+#userpage .userpage-header .portrait .grade{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 1px 1px;
+	font-size:7.5px;
+	line-height:158%;
+	color:rgb(255,255,255);
+	background-color:rgb(255,169,83);
+	border-radius: 7px;
+	text-align: center;
+}
+#userpage .userpage-header .nickname{
+	position: absolute;
+	bottom: 5px;
+	left: 88px;
+	font-size:14px;
+	line-height:143%;
+	color:rgb(255,255,255);
+}
+#userpage .userpage-header .title{
+	position: absolute;
+	bottom: -20px;
+	left: 88px;
+	padding: 1px 2px;
+	text-align: center;
+	font-size:9px;
+	line-height:122%;
+	color:rgb(255,255,255);
+	background-color:rgb(81,184,242);
+}
+#userpage .popularity{
+	overflow: hidden;
+}
+#userpage .popularity li{
+	text-align: center;
+	margin:5px 0px;
+	padding:3px 25px;
+	border-right:solid 1px rgb(230,230,230);
+	float: right;
+}
+#userpage .popularity .num{
+	font-size:12px;
+	line-height:17.28px;
+	color:rgb(113,120,127);
+}
+#userpage .popularity .pop{
+	font-size:9px;
+	line-height:17.37px;
+	color:rgb(163,169,175);
+}
+#userpage .detail{
+	padding: 15px 0px 44px 0px;
+	border-bottom: 5px solid rgb(245,245,245);
+	border-top:solid 1px rgb(230,230,230);
+}
+#userpage .detail .abstract{
+	font-size:12px;
+	line-height:142%;
+	color:rgb(113,120,127);
+	margin:0px 20px 9px 20px;
+}
+#userpage .detail .page-label{
+	margin: 0px 0px 0px 20px;
+	width: 270px;
+	float: left;
+}
+#userpage .detail .detail-more{
+	font-size:11px;
+	line-height:20px;
+	color:rgb(163,169,175);	
+	float: right;
+	border-color:rgb(164,169,175);
+	border-width:1px;
+	border-style:solid;
+	padding: 0px 15px 0px 15px;
+	margin-right:15px;
+	border-radius: 10px;
+}
+#userpage .search-option{
+	font-size:13px;
+	line-height:13px;
+	color:rgb(163,169,175);
+	text-align: center;
+	margin:7px 0px 6px 0px ;
+	height: 36px;
+	border-bottom:solid 1px rgb(230,230,230);
+}
+#userpage .search-option> div {
+	float: left;
+	width: 33%;
+	padding:8px 0px 8px 0px ;
+	border-right: solid 1px rgb(230,230,230);
+}
+#userpage .search-option .select {
+	color:rgb(81,183,241);
+}
+#userpage .article{
+	margin-bottom: 75px;
+}
+#userpage .article .content{
+    margin:0 12px 10px 12px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    border-bottom: solid 1px rgb(230,230,230) ;
+}
+#userpage .article .content .article_bg{
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+    margin-top: 18px;
+    height: 131px;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius: 3px;
+}
+#userpage .article .content .article_bg .article_author_pic{
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    height: 26px;
+    width: 26px;
+}
+#userpage .article .content .article_bg .article_author_pic img {
+    height:26px;
+    width:26px;
+    border-radius:50%;
+}
+#userpage .article .content .article_title{
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px 0 13px 0;
+}
+#userpage .article .content .article_content{
+    margin-top: 12px;
+    font-size:14px ;
+    color: rgb(141,147,154);
+    line-height: 20px;
+    margin:0 26px;
+}
+#userpage .article .content .article_label{
+    font-size: 11px;
+    color: rgb(164,169,175);
+    width: 40%;
+    float: left;
+    margin-top: 12px;
+}
+#userpage .article .content .article_watchnum{
+    font-size: 11px;
+    color: rgb(164,169,175);
+    width: 10%;
+    float: right;
+    margin-top: 12px;
+    padding-left:20px;
+    background: url('../img/static/eye.png') no-repeat left;
+    background-size: 17px 12px;
+}
+/*postanswer */
+#userpage .postanswer {
+	margin-bottom: 75px;
+	overflow: hidden;
+}
+#userpage .postanswer .post{
+	border-bottom: solid 1px rgb(230,230,230);
+	overflow: hidden;
+}
+#userpage .postanswer .post .topic-title{
+	font-size:16px ;
+	line-height:20px;
+	color:rgb(113,120,128);
+	margin: 17px 20px 14px 20px;
+}
+#userpage .postanswer .post .topic-content{
+	margin:0px 20px 5px 20px;
+	font-size: 14px;
+	line-height:150%;
+	color:rgb(141,147,154);
+}
+#userpage .postanswer .post .topic-picture {
+	margin: 0 20px;
+	font-size: 0;
+	-webkit-text-size-adjust:none;
+	position: relative;
+}
+#userpage .postanswer .post .topic-picture >div{
+	margin-right:5%;
+	margin-top: 10px;
+	width: 30%;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+}
+#userpage .postanswer .post .topic-picture >div:nth-child(3n) {
+	margin-right: 0!important;
+}
+#userpage .postanswer .post .topic-picture > div:before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+#userpage .postanswer .post .topic-picture img {
+	border-radius: 3px;
+}
+
+
+
+#userpage .postanswer .post .topic-picture .picnum{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 11px;
+	background-color:rgba(0,0,0,0.5);
+	line-height:21px;
+	color:rgb(255,255,255);
+	padding:0 5px;
+	border-radius: 3px;
+}
+#userpage .postanswer .post .topic-label{
+	margin: 16px 0px 9px 20px;
+	margin-left: 20px;
+	font-size:11px;
+	line-height:11px;
+	color:rgb(164,169,174);
+	float: left;
+}
+#userpage .postanswer .post .good{
+	margin: 16px 0px 9px 20px;
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+	background: url('../img/static/good.png') no-repeat left center;
+	background-size: 15px 16px;
+}
+#userpage .postanswer .post .reply{
+	margin:0 15px;
+	margin-top: 16px;
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+    background: url('../img/static/reply.png') no-repeat left center;
+	background-size: 15px 16px;
+}
+#userpage .postanswer .topic-reply{
+	width: 100%;
+	border-bottom: solid 1px rgb(230,230,230);
+	padding:15px 0px 12px 0px;
+	overflow: hidden;
+}
+#userpage .postanswer .topic-reply .reply-content{
+	font-size:12px;
+	line-height:175%;
+	color:rgb(113,120,128);
+	margin:0px 20px;
+}
+#userpage .postanswer .topic-reply .reply-content a{
+	background-color:rgb(81,184,242);
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size:12px;
+	line-height:175%;
+	color:rgb(255,255,255);
+	border-radius: 4px;
+}
+#userpage .postanswer .q-and-a{
+	overflow: hidden;
+	border-bottom: solid 1px rgb(230,230,230);	
+}
+#userpage .postanswer .q-and-a .qa-title{
+	margin:11px 11px 15px 20px;
+	font-size:16px;
+	line-height:150%;
+	color:rgb(113,119,127);
+}
+#userpage .postanswer .q-and-a .qa-content{
+	margin: 0px 20px;
+	font-size:13px;
+	line-height:162%;
+	color:rgb(141,147,153);
+}
+#userpage .postanswer .q-and-a .qa-label{
+    margin: 18px 12px 10px 20px;
+    overflow: hidden;
+    float: left;
+    background: url('../img/static/tips.png') no-repeat left center;
+	background-size: 13.5px 13.5px;
+	padding-left: 8px;
+}
+
+#userpage .postanswer .q-and-a .qa-label li{
+    float: left;
+    margin-right: 9px;
+    font-size: 11px;
+    line-height:18px;
+    display: inline;
+    text-align: center;
+    padding:2px 8px;
+    color:rgb(145,145,145);
+    border-radius: 3px;
+}
+#userpage .postanswer .q-and-a .reply{
+	margin:18px 15px 10px 15px;
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+    background: url('../img/static/reply.png') no-repeat left center;
+	background-size: 15px 16px;
+}
+#userpage .postanswer .q-and-a .watch{
+	margin: 18px 0px 10px 20px;
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+	height: 12px;
+	background: url('../img/static/eye.png') no-repeat left center;
+	background-size: 17px 12px;
+
+}
+/*meet */
+#userpage .meet{
+	margin-bottom: 75px;
+}
+#userpage .meet .meet-article{
+	border-bottom:solid 1px rgb(230,230,230);
+	margin:16px 27px 11px 16px;
+	overflow: hidden;
+}
+#userpage .meet .meet-article .meet-title{
+	font-size:16px ;
+	line-height:20px;
+	color:rgb(81,183,241);
+	margin-bottom: 14px;
+}
+#userpage .meet .meet-article .meet-conent{
+	font-size:14px ;
+	color: rgb(141,147,154);
+	line-height:164%;
+}
+#userpage .meet .meet-article .meet-time{
+	font-size: 11px;
+	color: rgb(164,169,175);
+	padding:18px 15px 18px 15px;
+	float: left;
+	background: url('../img/static/clock.png') no-repeat left center;
+	background-size: 10.5px 10.5px;
+	color:rgb(164,169,174);
+}
+#userpage .meet .meet-article .meet-number{
+	height: 12.5px;
+	font-size: 11px;
+	color: rgb(164,169,175);
+	padding:18px 15px 18px 15px;
+	background: url('../img/static/meetnumber.png') no-repeat left;
+	background-size: 10.5px 12.5px;
+	float: left;
+}

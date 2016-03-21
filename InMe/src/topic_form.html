@@ -1,0 +1,65 @@
+@@include('include/header.html')
+<body id="topic-form">
+<template v-if="newpost">
+	<div class="enter-title">
+		<input class="et" type="text" placeholder="输入标题" v-model="title">
+	</div>
+</template>
+<div class="enter-content">
+	<textarea class="ec" placeholder="输入内容" v-model="content"></textarea>
+</div>
+<div class="release-box">
+	<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn"><div class="edit-release">使用InMe心迹APP可以发布图片噢</div></a>
+	<div class="release" @click="submit">发布</div>
+</div>
+<script type="application/javascript">
+	vm_title.title = '发新帖';
+	var topicid = $.trim(getUrlParam('topicid'));
+	var postid = $.trim(getUrlParam('postid'));
+
+	vm = new Vue({
+		el : '#topic-form',
+		data : {
+			title : '',
+			content : '',
+			newpost : (postid == '') ? true : false
+		},
+		computed : {
+			redirect_url : function(){
+				if (this.newpost) {
+					var url = base_url + '/app/topic/shareSubmitPost?';
+					url += 'topicid=' + topicid;
+					url += '&title=' + this.title;
+					url += '&content=' + this.content;
+				} else {
+					var url = base_url + '/app/topic/shareSubmitPostReply?';
+					url += 'postid=' + postid;
+					url += '&content=' + this.content;
+				}
+
+				return url;
+			}
+		},
+		methods : {
+			submit : function () {
+				if (this.newpost) {
+					if ($.trim(this.title) == '' || $.trim(this.content) == '') {
+						alert('标题或者内容为空');
+						return ;
+					}
+				} else {
+					if ($.trim(this.content) == '') {
+						alert('回复内容为空');
+						return ;
+					}
+				}
+				redirect_uri=encodeURIComponent(this.redirect_url)
+				var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxef0bb98833150258&redirect_uri=' + redirect_uri + '&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+				location.href = url;
+			}
+		}
+	});
+
+</script>
+</body>
+</html>

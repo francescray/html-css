@@ -1,0 +1,59 @@
+#topic-form .enter-title {
+	height: 48px;
+	line-height: 48px;
+	border-bottom: solid 1px #E6E6E6;
+	padding: 0 15px;
+}
+#topic-form .enter-title .et{
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 14px;
+	line-height:100%;
+	border: none;
+}
+#topic-form .enter-content {
+	padding: 10px;
+	border-bottom: solid 1px #E6E6E6;
+}
+#topic-form .enter-content .ec{
+	outline: none;
+	border: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	height: 210px;
+	font-size: 14px;
+	line-height:139%;
+}
+#topic-form .release-box .edit-release{
+	height:87px;
+	margin: 10px 0px 0px 12px;
+	padding: 0px 0px 0px 24px;
+	background: url('../img/static/light.png')  no-repeat;
+	background-size: 20px 17px;
+	font-size: 12px;
+	float: left;
+	line-height:163%;
+	text-decoration:underline;
+	color:rgb(127,127,127);
+}
+#topic-form .release-box .release{
+	width: 90px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	border-radius: 3px;
+	margin-top: 8px;
+	background: rgb(94,190,244);
+	text-align: center;
+	float: right;
+	margin-right: 12px;
+	color: #FFF;
+}
+#topic-form .foot{
+	position: fixed;
+	bottom: 0;
+	overflow: auto;
+	padding: 0;
+}

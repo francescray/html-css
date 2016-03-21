@@ -1,0 +1,89 @@
+@@include('include/header.html')
+<body id="topic-list">
+<header>
+	<div class="header-title">#{{v.name}}</div>
+	<div class="other"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">下载&nbsp;&nbsp;InMe心迹</a></div> 
+</header>
+<div class="topic-body">
+	<template v-for="post in v.posts">
+		<a href="topic.html?id={{ post.id }}" class="block">
+			<div class="article-title">{{post.title}}</div>
+			<div class="person-abstract">
+				<div class="left"> <img :src="post.headportrait" width="100%"></div>
+				<div class="center">{{post.nickname}}</div>
+				<div class="watchnum">{{ post.viewnum }}</div>
+				<div class="eye">&nbsp;&nbsp;&nbsp;</div>
+				<div class="time">{{ post.time | timestampformat 'yyyy-MM-dd' }}</div>
+			</div>
+			<div class="topic-content">{{ post.content }}</div>
+			<div v-if="post.img1" class="topic-picture">
+				<div v-if="post.img1" :style="{ backgroundImage : 'url(' + post.img1 + '@220w_220h_90Q_0e' + ')' }"></div>
+				<div v-if="post.img2" :style="{ backgroundImage : 'url(' + post.img2 + '@220w_220h_90Q_0e' + ')' }"></div>
+				<div v-if="post.img3" :style="{ backgroundImage : 'url(' + post.img3 + '@220w_220h_90Q_0e' + ')' }">
+					<div v-if="post.img4" class="picnum">4张</div>
+				</div>
+			</div>
+			<div class="reply">{{post.replynum}}</div>
+			<div class="good">{{post.likenum}}</div>
+			<div class="divider-bar"></div>
+		</a>
+	</template>
+</div>
+	<div class="more">
+		<div class="clickmore"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多内容</a></div>
+	</div>
+<div class="topic-footer">
+	<div class="share" @click="show" style="display: none"></div>
+	<a href="topic_form.html?topicid={{ topicid }}"><div class="post"></div></a>
+</div>
+<template v-if="mask">
+	<div class="mask" @click="hide">
+		<div class="qrcode" @click="stop">
+			<img src="img/static/DRcode.png" width="150">
+		</div>
+	</div>
+</template>
+<script type="application/javascript">
+	var id = getUrlParam('id');
+
+	vm = new Vue({
+		el : '#topic-list',
+		data : {
+			v : {},
+			topicid : id,
+			mask : false,
+		},
+		methods : {
+			hide : function() {
+				this.mask = false;
+			},
+			show : function() {
+				this.mask = true;
+			},
+			stop : function(event) {
+				event.stopPropagation();
+			}
+		}
+	});
+
+	var get = {
+		id : id
+	};
+	$.getJSON(url('topic/shareFetchTopic'), get, function(data) {
+		if (data.code == '0') {
+			vm.v = data.data;
+			vm_title.title = '#' + data.data.name;
+			wx_share();
+		}
+	});
+
+    function wx_share() {
+        var share = {
+            title : vm.v.name,
+            desc : vm.v.desc
+        };
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+#topic-list .topic-body{
+	padding-bottom: 20px;
+}
+#topic-list .topic-body .article-title{
+	display: inline-block;
+	margin:15px;
+	font-size:21px;
+	line-height:150%;
+	font-weight:bold;
+	color:rgb(41,41,41);
+	text-align:left;
+}
+#topic-list .topic-body .topic-content{
+	margin:4px 15px 5px 15px;
+	display: inline-block;
+	font-size: 14px;
+	line-height:150%;
+	color:rgb(41,41,41);
+}
+#topic-list .topic-body .topic-picture {
+	margin: 0 15px;
+	font-size: 0;
+	-webkit-text-size-adjust:none;
+	position: relative;
+}
+#topic-list .topic-body .topic-picture > div {
+	margin-right:5%;
+	margin-top: 10px;
+	width: 30%;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+}
+#topic-list .topic-body .topic-picture > div:nth-child(3n) {
+	margin-right: 0!important;
+}
+#topic-list .topic-body .topic-picture > div:before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+#topic-list .topic-body .topic-picture img {
+	border-radius: 3px;
+}
+#topic-list .topic-body .topic-picture .picnum{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 11px;
+	background-color:rgba(0,0,0,0.5);
+	line-height:21px;
+	color:rgb(255,255,255);
+	padding:0 5px;
+	border-radius: 3px;
+}
+#topic-list .topic-body .good{
+    margin-left: 20px;
+    margin-top: 10px;
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+	background: url('../img/static/good.png') no-repeat left center;
+	background-size: 15px 16px;
+}
+#topic-list .topic-body .reply{
+    margin:0 15px;
+    margin-top: 10px;    
+    float: right;
+    font-size:10px;
+	color:rgb(164,169,174);
+	padding-left: 18px;
+    background: url('../img/static/reply.png') no-repeat left center;
+	background-size: 15px 16px;
+}
+#topic-list .topic-body .divider-bar{
+	margin-top: 23px;
+	height: 12px;
+	width: 100%;
+	display: inline-block;
+	background: rgb(230,230,230);
+}
+#topic-list .discussbox{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 54px;
+	border-top: 1px solid rgb(230,230,230);
+	text-align: center;
+	padding: 0 15px;
+	background: #FFF;
+}
+#topic-list .discussbox .joindiscuss {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 8px 9px;
+	font-size: 13px;
+	margin:11px 0;
+	border: 1px solid rgb(230,230,230);
+	color:rgb(97,97,97);
+	border-radius: 3px;
+}
+#topic-list .topic-footer{
+	position:fixed;
+	width: 100%;
+	bottom: 30px;
+}
+#topic-list .topic-footer .share{
+	float: left;
+	margin-left: 20px;
+	width: 58px;
+	height:  58px;
+	background:url('../img/static/topic_qrcode.png') no-repeat center;
+	background-size: 55px 55px;
+}
+#topic-list .topic-footer .post{
+	float: right;
+	margin-right: 20px;
+	width: 58px;
+	height:  58px;
+	background:url('../img/static/topic_post.png') no-repeat center;
+	background-size: 58px 58px;
+}
+#topic-list .mask {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+}
+#topic-list .qrcode {
+	position: fixed;
+	text-align: center;
+	bottom: 90px;
+	z-index: 200;
+	left: 50%;
+	margin-left: -75px;
+}

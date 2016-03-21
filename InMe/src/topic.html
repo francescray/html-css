@@ -1,0 +1,86 @@
+@@include('include/header.html')
+<body id="topic">
+<header>
+	<a href="topic_list.html?id={{ v.topicid }}"><div class="logo">#{{ v.topicname }}</div></a>
+</header>
+<div class="topic-body">
+	<div class="article-title">{{v.title}}</div>
+	<div class="person-abstract">
+		<div class="left"> <img :src="v.headportrait" width="100%"></div>
+		<div class="center">{{v.nickname}}</div>
+		<div class="watchnum">{{ v.viewnum }}</div>
+		<div class="eye">&nbsp;&nbsp;&nbsp;</div>
+		<div class="time">{{ v.time | timestampformat 'yyyy-MM-dd' }}</div>
+	</div>
+	<div class="topic-content">{{v.content}}</div>
+	<div v-if="v.img1" class="topic-picture">
+		<div v-if="v.img1" :style="{ backgroundImage : 'url(' + v.img1 + '@220w_220h_90Q_0e' +')' }"></div>
+		<div v-if="v.img2" :style="{ backgroundImage : 'url(' + v.img2 + '@220w_220h_90Q_0e' + ')' }"></div>
+		<div v-if="v.img3" :style="{ backgroundImage : 'url(' + v.img3 + '@220w_220h_90Q_0e' + ')' }"></div>
+		<div v-if="v.img4" :style="{ backgroundImage : 'url(' + v.img4 + '@220w_220h_90Q_0e' + ')' }"></div>
+	</div>
+	<div v-if="v.topicname" class="label">#{{ v.topicname }}</div>
+</div>
+<div class="reply" v-if="v.replynum">
+	<div class="reply-number">{{v.replynum}}条回复</div>
+	<template v-for="reply in v.replies">
+		<div class="self-reply" >
+			<div class="man-abstract">
+				<div class="left"> <img :src="reply.headportrait"  width="100%"></div>
+				<div class="center">
+					<div class="leftcenter">
+						{{reply.nickname}} &nbsp;
+						<div class="title {{ reply.usertype | userTypeclass }}">{{ reply.usertype | userTypename }}</div><br>
+						<a href="#">{{ reply.time | timestampformat 'yyyy-MM-dd' }}</a>
+					</div>
+				</div>
+				<div class="rightcenter"></div>
+				<div class="right"></div>
+			</div>
+			<div  v-if="reply.istoreply==1" class="reply-content"><a>回复@{{ reply.replytargetnickname }}</a>{{ reply.content }}</div>
+			<div v-else="reply.istoreply==0" class="reply-content">{{ reply.content }}</div>
+		</div>
+	</template>
+	<div class="more">
+		<div class="clickmore"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多内容</a></div>
+	</div>
+</div>
+<div class="discussbox">
+	<div>
+		<a class="joindiscuss" href="topic_form.html?postid={{ v.id }}">参与讨论</a>
+	</div>
+</div>
+<script type="application/javascript">
+	vm = new Vue({
+		el : '#topic',
+		data : {
+			v : {}
+		}
+	});
+	var get = {
+		id : getUrlParam('id')
+	};
+	$.getJSON(url('topic/shareFetchPost'), get, function(data) {
+		if (data.code == '0') {
+			vm.v = data.data;
+
+			if (vm.v.title == '') {
+				vm_title.title = 'InMe心迹 - 帖子';
+			} else {
+				vm_title.title = data.data.title;
+			}
+
+			wx_share();
+		}
+	});
+
+    function wx_share() {
+        var share = {
+            title : vm_title.title,
+            desc : vm.v.content
+        };
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

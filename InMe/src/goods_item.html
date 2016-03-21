@@ -1,0 +1,67 @@
+@@include('include/header.html')
+<body id="goods-item">
+	<header>
+ 	   <div class="logo">约见{{ v1.nickname }}</div>
+	</header>
+	<div class="goods-article">
+		<div class="goods-titile">{{ v2.name }}</div>
+		<div class="authorid">{{ v1.nickname }}</div>
+		<div class="author-time">{{ v2.durationdesc }}/次</div>
+		<div class="author-title">{{ v1.officialtitle }}</div>
+		<div class="goods-content">{{{ content }}}</div>
+	</div>
+	@@include('include/footer_result.html')
+<script type="application/javascript">
+	var otype = getUrlParam('otype');
+	var oid = getUrlParam('oid');
+	var psyid = getUrlParam('psyid');
+	var citycode = getUrlParam('citycode');
+
+	var vm = new Vue({
+		el : '#goods-item',
+		data : {
+			v1 : {},
+			v2 : {},
+			content : ''
+		}
+	})
+
+	var get1 = {
+		otype : getUrlParam('otype'),
+		oid : getUrlParam('oid')
+	};
+	$.getJSON(url('goods/shareFetchGoodsDesc'), get1, function(data) {
+		if (data.code == '0') {
+			vm.content = data.data;
+		}
+	});
+
+	var get2 = {
+		psyid : psyid,
+		citycode: citycode
+	};
+	$.getJSON(url('goods/shareFetchGoods'), get2, function(data) {
+		if (data.code == '0') {
+			vm.v1 = data.data;
+			$(data.data.goods).each(function(i) {
+				if (data.data.goods[i].oid == oid) {
+					vm.v2 = data.data.goods[i];
+				}
+			});
+			vm_title.title = '约见' + vm.v1.nickname;
+		}
+		wx_share();
+	});
+    function wx_share() {
+    	var share;
+	    var title = '在InMe约见'+vm.v1.nickname;
+	    share = {
+	        title : title,
+	        desc : vm.v2.name,
+	        img : vm.v1.psylistpic
+	    };
+	    initWechat(share);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+@@include('include/header.html')
+<body id="pressure-result">
+<header>
+    <div class="logo">InMe心理测试<span v-if="share">（{{ testtime | timestampformat 'yyyy-MM-dd' }}）</span></div>
+</header>
+<section id="pressure-bg">
+    <div class="circle">
+        <div class="water" :style="{ height: resultscore + '%' }"></div>
+        <div class="score">
+            {{ circle }}
+        </div>
+    </div>
+    <div class="water_circle"></div>
+</section>
+<section id="pressure-content">
+    {{{ v.data }}}
+</section>
+
+<template v-if="share">
+    <footer class="border">
+        <a class="btn-down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多心理测试下载InMe心迹APP</a>
+        <a class="btn-test" href="test_question.html?scaleportfolioid={{ scaleportfolioid }}" style="width: 124px">马上测试一下</a>
+    </footer>
+</template>
+<template v-else>
+    @@include('include/footer_result.html')
+</template>
+
+<script type="application/javascript">
+    var share = getUrlParam('share');
+    var scaleportfolioid = getUrlParam('scaleportfolioid');
+    var resultscore = decodeURIComponent(getUrlParam('resultscore'));
+    var testtime = getUrlParam('testtime');
+
+    var vm = new Vue({
+        el : '#pressure-result',
+        data : {
+            v : {
+                data : ''
+            },
+            resultscore : 0,
+            testtime : testtime,
+            scaleportfolioid : scaleportfolioid,
+            circle : 0
+        },
+        computed : {
+            share : function() {
+                if (share == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    });
+
+    vm.$watch('resultscore', function() {
+        var per = 2000 / this.resultscore;
+
+        var interval = setInterval(function () {
+            ++vm.circle;
+            if (vm.circle >= this.resultscore) {
+                clearInterval(interval);
+            }
+        }, per);
+    });
+
+    var get = {
+        scaleportfolioid : scaleportfolioid,
+        resultscore : resultscore
+    };
+
+    if (scaleportfolioid == '1' ) {
+        vm_title.title = '抑郁测试结果';
+    }else if(scaleportfolioid == '2' ) {
+        vm_title.title = '焦虑测试结果';
+    }else if(scaleportfolioid == '3' ) {
+        vm_title.title = '压力测试结果';
+    }
+    
+    $.getJSON(url('test/shareFetchScaleTestResult'), get, function(data) {
+        if (data.code == '0') {
+            vm.v.data = data.data;
+            vm.resultscore = resultscore;
+        }
+    });
+
+    wx_share();
+
+    function wx_share() {
+        var data = {
+            1 : {
+                title : '郁郁寡欢，躁动不安，悲观厌世？来InMe心迹测测你的抑郁指数吧！',
+                desc : '毕竟在InMe，生活从来不是一成不变的灰色。'
+            },
+            2 : {
+                title : '头痛欲裂，选择恐惧，烦躁易怒？来InMe心迹测测你的焦虑指数吧！',
+                desc : '或许在InMe，问题并没有你想象的那么棘手。'
+            },
+            3 : {
+                title : '压力山大，无精打采，疲惫不堪?来InMe心迹测测你的压力指数吧！',
+                desc : '难怪在InMe，他们找到了倾诉的树洞。'
+            }
+        };
+
+        var title = vm_title.title;
+        var desc = '';
+        if (typeof(data[scaleportfolioid]) != 'undefined') {
+            title = data[scaleportfolioid].title;
+            desc = data[scaleportfolioid].desc;
+        }
+        share = {
+            title : title,
+            desc : desc,
+            img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png',
+            link : path_url + '&share=1'
+        };
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

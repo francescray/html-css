@@ -1,0 +1,181 @@
+@@include('include/header.html')
+<body>
+<section id="question-item">
+    <div class="title">{{ v.question }}</div>
+    <div class="process">({{ process + 1 }}/{{ total }})</div>
+    <div class="content">
+        <ul class="choice">
+            <li v-if="v.option1" @click="check" :score="v.option1score" :optionid="v.option1id">{{ v.option1 }}</li>
+            <li v-if="v.option2" @click="check" :score="v.option2score" :optionid="v.option2id">{{ v.option2 }}</li>
+            <li v-if="v.option3" @click="check" :score="v.option3score" :optionid="v.option3id">{{ v.option3 }}</li>
+            <li v-if="v.option4" @click="check" :score="v.option4score" :optionid="v.option4id">{{ v.option4 }}</li>
+            <li v-if="v.option5" @click="check" :score="v.option5score" :optionid="v.option5id">{{ v.option5 }}</li>
+            <li v-if="v.option6" @click="check" :score="v.option6score" :optionid="v.option6id">{{ v.option6 }}</li>
+            <li v-if="v.option7" @click="check" :score="v.option7score" :optionid="v.option7id">{{ v.option7 }}</li>
+            <li v-if="v.option8" @click="check" :score="v.option8score" :optionid="v.option8id">{{ v.option8 }}</li>
+            <li v-if="v.option9" @click="check" :score="v.option9score" :optionid="v.option9id">{{ v.option9 }}</li>
+            <li v-if="v.option10" @click="check" :score="v.option10score" :optionid="v.option10id">{{ v.option10 }}</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <a class="down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn"><span>更多心理测试下载InMe心迹APP</span></a>
+</footer>
+
+<script type="application/javascript">
+
+    var type = getUrlParam('type');
+    var scaleportfolioid = getUrlParam('scaleportfolioid');
+
+    if (type == 'common') {
+        vm_title.title = '每日情绪测试';
+    } else {
+        if (scaleportfolioid == '1' ) {
+            vm_title.title = '抑郁测试';
+        }else if(scaleportfolioid == '2' ) {
+            vm_title.title = '焦虑测试';
+        }else if(scaleportfolioid == '3' ) {
+            vm_title.title = '压力测试';
+        }
+    }
+
+    var vm = new Vue({
+        el : '#question-item',
+        data : {
+            data : [],
+            process : 0,
+            score : 0,
+            type : type,
+            scaleportfolioid : scaleportfolioid,
+            detail : [],
+            portid : ''
+        },
+        computed : {
+            v : function() {
+                return new Object(this.data[this.process]);
+            },
+            total : function() {
+                return this.data.length;
+            },
+            score_actual : function () {
+                var score = this.score;
+                if (this.scaleportfolioid == '2' ) {
+                    score = 1.25 * score;
+                }
+
+                if (score > 100) {
+                    score = 100;
+                }
+                return parseInt(score);
+            }
+        },
+        methods : {
+            check :function(event) {
+                if ($('.choice .selected').length > 0) {
+                    return;
+                }
+
+                var that = this;
+                var $check = $(event.target);
+
+                // 计算
+                var score = parseInt($check.attr('score'));
+                this.score = score + this.score;
+
+                // 类型为每日情绪时
+                if (type == 'common') {
+                    this.detail.push({
+                        'oid' : $check.attr('optionid'),
+                        'score' : score
+                    });
+                }
+
+                // 处理效果
+                $check.addClass('selected');
+                setTimeout(function() {
+                    if (that.process + 1 < that.total) {
+                        $check.removeClass('selected');
+                        ++that.process;
+                    } else {
+                        var url = '';
+                        if (type == 'common') {
+                            url += 'test_mood_result.html?';
+                            url += 'detail=' + encodeURI(JSON.stringify(that.detail));
+                            url += '&portid=' + that.portid;
+                        } else {
+                            url += 'test_pressure_result.html?';
+                            url += 'scaleportfolioid=' + that.scaleportfolioid;
+                            url += '&resultscore=' + that.score_actual;
+                        }
+                        location.href = url;
+                    }
+                }, 400);
+
+            }
+        }
+    });
+
+    if (type == 'common') {
+        $.getJSON(url('test/shareFetchCommonTest'), get, function(data) {
+            if (data.code == '0') {
+                vm.data = data.data.questions;
+                vm.portid = data.data.portid;
+            }
+        });
+    } else {
+        var get = {
+            scaleportfolioid : scaleportfolioid
+        };
+        $.getJSON(url('test/shareFetchScaleTest'), get, function(data) {
+            if (data.code == '0') {
+                vm.data = data.data;
+            }
+        });
+    }
+
+    wx_share();
+
+    function wx_share() {
+        var share;
+        if (type == 'common') {
+            share = {
+                title : '我的心迹，惟愿与你分享',
+                desc : '来InMe遇见未知的自己。讲你的心事，听TA的故事。',
+                img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png'
+            };
+        } else {
+            var data = {
+                1 : {
+                    title : '郁郁寡欢，躁动不安，悲观厌世？来InMe心迹测测你的抑郁指数吧！',
+                    desc : '毕竟在InMe，生活从来不是一成不变的灰色。'
+                },
+                2 : {
+                    title : '头痛欲裂，选择恐惧，烦躁易怒？来InMe心迹测测你的焦虑指数吧！',
+                    desc : '或许在InMe，问题并没有你想象的那么棘手。'
+                },
+                3 : {
+                    title : '压力山大，无精打采，疲惫不堪?来InMe心迹测测你的压力指数吧！',
+                    desc : '难怪在InMe，他们找到了倾诉的树洞。'
+                }
+            };
+
+            var title = vm_title.title;
+            var desc = '';
+            if (typeof(data[scaleportfolioid]) != 'undefined') {
+                title = data[scaleportfolioid].title;
+                desc = data[scaleportfolioid].desc;
+            }
+
+            share = {
+                title : title,
+                desc : desc,
+                img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png',
+                link : path_url.replace("&isnext=","")
+            };
+        }
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

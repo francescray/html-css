@@ -1,0 +1,219 @@
+#mood-animation {
+    position: relative;
+    margin: 10px 12px;
+    border-radius: 3px;
+    background: #51B7F1;
+    height: 232px;
+}
+#mood-animation .round {
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#mood-animation .round1 {
+    width: 173px;
+    height: 173px;
+    background: #5DBCF2;
+    animation: kf-round1 1.5s linear infinite;
+    -webkit-animation: kf-round1 1.5s linear infinite;
+}
+#mood-animation .round2 {
+    width: 143px;
+    height: 143px;
+    background: #66BFF3;
+    animation:kf-round2 1.5s linear infinite;
+    -webkit-animation:kf-round2 1.5s linear infinite;
+}
+#mood-animation .round6 {
+    width: 114px;
+    height: 114px;
+    animation:kf-round6 1.5s linear infinite;
+    -webkit-animation:kf-round6 1.5s linear infinite;
+    background: #7DC9F4;
+}
+@keyframes kf-round1 {
+    0% {
+        width: 173px;
+        height: 173px;
+        opacity: 1;
+    }
+    90% {
+        width: 193px;
+        height: 193px;
+        opacity: 0.4;
+    }
+    100% {
+        width: 173px;
+        height: 173px;
+        opacity: 0.4;
+    }
+}
+@-webkit-keyframes kf-round1 {
+    0% {
+        width: 173px;
+        height: 173px;
+        opacity: 1;
+    }
+    90% {
+        width: 193px;
+        height: 193px;
+        opacity: 0.4;
+    }
+    100% {
+        width: 173px;
+        height: 173px;
+        opacity: 0.4;
+    }
+}
+@keyframes kf-round2 {
+    0% {
+        width: 143px;
+        height: 143px;
+        opacity: 1;
+    }
+    100% {
+        width: 163px;
+        height: 163px;
+        opacity: 0.4;
+    }
+}
+@-webkit-keyframes kf-round2 {
+    0% {
+        width: 143px;
+        height: 143px;
+        opacity: 1;
+    }
+    100% {
+        width: 163px;
+        height: 163px;
+        opacity: 0.4;
+    }
+}
+@keyframes kf-round6 {
+    0% {
+        width: 114px;
+        height: 114px;
+        opacity: 1;
+    }
+    100% {
+        width: 134px;
+        height: 134px;
+        opacity: 0.3;
+    }
+}
+@-webkit-keyframes kf-round6 {
+    0% {
+        width: 114px;
+        height: 114px;
+        opacity: 1;
+    }
+    100% {
+        width: 134px;
+        height: 134px;
+        opacity: 0.3;
+    }
+}
+#mood-animation .round3 {
+    width: 114px;
+    height: 114px;
+    background: #85CDF5;
+}
+#mood-animation .round3 .before {
+    position: absolute;
+    border-radius: 57px 0 0 57px;
+    display: block;
+    content: '';
+    width: 57px;
+    height: 114px;
+    background: #85CDF5;
+    z-index: 5;
+    transform-origin: 100% 50%;
+}
+
+#mood-animation .round3 .after {
+    position: absolute;
+    border-radius: 0 57px 57px 0;
+    display: block;
+    content: '';
+    width: 57px;
+    height: 114px;
+    background: #85CDF5;
+    z-index: 5;
+    right: 0;
+    transform-origin: 0 50%;
+}
+#mood-animation .round4 {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+#mood-animation .round4:before {
+    border-radius: 57px 0 0 57px;
+    content: '';
+    width: 57px;
+    height: 110px;
+    position: absolute;
+    border: solid 2px #FFF;
+    border-right: none;
+    box-sizing: border-box;
+    z-index: 4;
+    left: 0;
+    top: 0;
+}
+#mood-animation .round4:after {
+    border-radius: 0 57px 57px 0;
+    content: '';
+    width: 57px;
+    height: 110px;
+    position: absolute;
+    border: solid 2px #FFF;
+    border-left: none;
+    box-sizing: border-box;
+    z-index: 2;
+    right: 0;
+    top:0;
+}
+#mood-animation .round5 {
+    width: 11px;
+    height: 11px;
+    border: solid 2px #FFF;
+    top: -3px;
+    margin: 0;
+    box-sizing: border-box;
+    right: 0;
+    left: auto;
+    z-index: 6;
+}
+#mood-animation .raw-mood {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    z-index: 7;
+    color: #FFF;
+}
+#mood-animation .num-value {
+    margin-top: 15px;
+    font-size: 48px;
+    line-height: 56px;
+}
+#mood-animation .content {
+    padding-top: 250px;
+    font-size: 12px;
+    line-height: 156%;
+    color: #595959;
+    margin-bottom: 75px;
+}

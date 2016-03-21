@@ -1,0 +1,100 @@
+@@include('include/header.html')
+<body id="mood-result">
+<header>
+    <div class="logo">InMe每日情绪测试<span v-if="share">（{{ v.time  | timestampformat 'yyyy-MM-dd' }}）</span></div>
+</header>
+
+<section id="mood-animation">
+    <div class="round1 round"></div>
+    <div class="round2 round"></div>
+    <div class="round6 round"></div>
+    <div class="round3 round">
+        <div class="before">
+            <div class="round5 round"></div>
+        </div>
+        <div class="after"></div>
+        <div class="round4 round">
+            <div class="raw-mood">
+                <div class="num-value">{{ percent_dym }}</div>
+                <div>我的情绪值</div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" v-model="percent" :value="percent" />
+    <div class="content">
+        {{{ v.analysis }}}
+    </div>
+</section>
+
+<template v-if="share">
+    <footer class="border">
+        <a class="btn-down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多心理测试下载InMe心迹APP</a>
+        <a class="btn-test" href="test_question.html?type=common" style="width: 124px">马上测试自己的情绪</a>
+    </footer>
+</template>
+<template v-else>
+    @@include('include/footer_result.html')
+</template>
+
+<script src="lib/jquery.transit/jquery.transit.min.js"></script>
+<script src="js/mood_animation.min.js"></script>
+<script type="application/javascript">
+    var share = getUrlParam('share');
+    var hid = getUrlParam('hid');
+    var detail = getUrlParam('detail');
+    var portid = getUrlParam('portid');
+
+    vm_title.title = '每日情绪测试';
+
+    var vm = new Vue({
+        el : '#mood-result',
+        data : {
+            v : {
+                score : 0,
+                analysis : ''
+            },
+            percent : 0,
+            percent_dym : 0
+        },
+        computed : {
+            share : function() {
+                if (share == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    });
+    vm.$watch('percent', function() {
+        mood_animation(this.percent, this);
+    });
+
+    var get = {
+        hid : hid,
+        detail : detail,
+        portid : portid
+    };
+
+    $.getJSON(url('test/shareFetchCommonTestResult'), get, function(data) {
+        if (data.code == '0') {
+            vm.v = data.data;
+            vm.percent = data.data.score;
+            wx_share(vm.percent);
+        }
+    });
+
+    function wx_share(score) {
+        var title = '今天我的情绪值是' + score + '，一起来InMe发现心自己';
+        share = {
+            title : title,
+            desc : '是时候来InMe听听心的声音了。',
+            img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png',
+            link : path_url + '&share=1'
+        };
+        initWechat(share);
+    }
+
+</script>
+</body>
+</html>

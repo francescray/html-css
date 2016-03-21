@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>等级积分</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/page1.css">
+    <script src="../lib/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body id="page1">
+	<div class="description-display">
+		<div class="round">
+			Lv0
+		</div>
+		<div class="levelnum">		
+			<div class="levelnum-beg">Lv0</div>
+			<div class="levelnum-end">Lv1</div>
+		</div>
+		<div class="progess-bar">
+            <div class="precent">
+            	<div class="ball"></div>
+            </div>  
+		</div>
+		<div class="experience">
+			<div class="experience-label">经验值</div>
+			<div class="experience-detail"><a>2</a>点经验，距离Lv1还需<a>10</a>点经验</div>
+		</div>
+		<div class="integral">
+			<div class="integral-label">积分</div>
+			<div class="integral-num">2</div>
+		</div>
+	</div>
+	<div class="tips">
+		<div class="step">
+			<div class="title-up1 title-down1">1、如何获得积分？</div>  
+			<div class="detail1">通过发帖就可以获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分获得积分</div>
+		</div>
+		<div class="step">
+			<div class="title-up2 title-down2">2、如何升级</div>  
+			<div class="detail2">通过发帖就可以获得积分获得积分</div>
+		</div>
+		<div class="step">
+			<div class="title-up3 title-down3">3、等级的规则</div>  
+			<div class="detail3">通过发帖就可以获得积分获得积分</div>
+		</div>
+	</div>
+
+<script type="application/javascript">
+	$('.precent').width('80%');
+	$('#page1').ready(function(){
+ 		$(".tips .step .title-up1").click(function(){
+ 			$(".tips .step .detail1").slideToggle();
+ 			$(".tips .step .title-up1").toggleClass("title-down1");
+ 		});
+ 		$(".tips .step .title-up2").click(function(){
+ 			$(".tips .step .detail2").slideToggle();
+ 			$(".tips .step .title-up2").toggleClass("title-down2");
+ 		});
+ 		 $(".tips .step .title-up3").click(function(){
+ 			$(".tips .step .detail3").slideToggle();
+ 			$(".tips .step .title-up3").toggleClass("title-down3");
+ 		});
+	});
+</script>
+</body>
+</html>

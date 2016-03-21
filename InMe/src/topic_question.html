@@ -1,0 +1,105 @@
+@@include('include/header.html')
+<body id="topic-question">
+	<header>
+   		<div class="logo">InMe问答</div>
+	</header>
+	<div class="answer-introduce">
+		<div class="article-title">{{v.title}}</div>
+		<div class="person-abstract">
+			<div v-if="v.isanonymous==1" class="left"> <img src="img/static/anonymous.png" width="100%"></div>
+			<div v-if="v.isanonymous==0" class="left"> <img :src="v.headportrait" width="100%"></div>
+			<div v-if="v.isanonymous==1" class="center">匿名用户</div>
+			<div v-else="v.isanonymous==0" class="center">{{v.nickname}}</div>
+			<div class="watchnum">{{ v.viewnum }}</div>
+			<div class="eye">&nbsp;&nbsp;&nbsp;</div>
+			<div class="time">{{ v.time | timestampformat 'yyyy-MM-dd' }}</div>
+		</div>
+		<div class="question-content">{{v.content}}</div>
+		<ul class="page-label">
+            <li v-for="tag in v.tags" class="label1">{{ tag.name }}</li>
+        </ul>
+	</div>
+	<template v-if="v.adoptedreply.replytargetnickname">
+		<div class="divider-bar"></div>
+		<div class="answer-detail">
+			<div class="man-abstract">
+				<div class="left"> <img :src="v.adoptedreply.headportrait" width="100%"></div>
+				<div class="center">
+					<div class="leftcenter">{{v.adoptedreply.replytargetnickname}} <br><a>{{ v.adoptedreply.time | timestampformat 'yyyy-MM-dd' }}</a></div>
+					<div class="title {{ v.adoptedreply.usertype | userTypeclass }}">{{ v.adoptedreply.usertype | userTypename }}</div>
+				</div>
+				<div class="gap"></div>
+				<div class="rightcenter"></div>
+				<div class="right"></div>
+			</div>
+			<div  v-if="v.adoptedreply.istoreply==0" class="reply-content caina ">{{v.adoptedreply.content}}</div>
+			<div v-else="v.adoptedreply.istoreply==1" class="reply-content caina"><a>回复@{{v.adoptedreply.replytargetnickname}}</a>{{v.adoptedreply.content}}</div>
+		</div>
+	</template>
+	<div class="divider-bar"></div>
+	<div class="reply" v-if="v.replynum">
+		<div class="reply-number">{{v.replynum}}条回复</div>
+		<template v-for="reply in v.replies">
+			<div class="man-abstract">
+				<div class="left"> <img :src="reply.headportrait"  width="100%"></div>
+				<div class="center">
+					<div class="leftcenter">{{reply.nickname}} <br><a>{{ reply.time | timestampformat 'yyyy-MM-dd' }}</a></div>
+					<div class="title {{ reply.usertype | userTypeclass }}">{{ reply.usertype | userTypename }}</div>
+				</div>
+				<div class="rightcenter"></div>
+				<div class="right"></div>
+			</div>
+			<div  v-if="reply.istoreply==1" class="reply-content"><a>回复@{{ reply.replytargetnickname }}</a>{{ reply.content }}</div>
+			<div v-else="reply.istoreply==0" class="reply-content">{{ reply.content }}</div>
+		</div>
+	</template>
+		<div class="more">
+			<div class="clickmore"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">下载应用看到更多精彩回复</a></div>
+		</div>
+	</div>
+	<footer class="border">
+    	<a class="btn-down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多内容下载InMe心迹APP</a>
+   		<a class="btn-test" href="topic_question.html?id={{ v.id }}&isnext=1">换一个</a>
+	</footer>
+<script type="application/javascript">
+	vm = new Vue({
+		el : '#topic-question',
+		data : {
+			v : {
+				adoptedreply : {}
+			}
+		}
+	});
+	var get = {
+		id : getUrlParam('id'),
+		isnext : getUrlParam('isnext')
+	};
+	$.getJSON(url('topic/shareFetchQuestion'), get, function(data) {
+		if (data.code == '0') {
+			vm.v = data.data;
+			vm_title.title = 'InMe问答';
+		}
+		wx_share();
+	});
+    function wx_share() {
+    	var share;
+    	var path_url = window.location.href;
+        var title1 = 'InMe问答社区';
+        var desc1 ;
+        if(typeof(vm.v.title)!== 'undefined'){
+	        if (vm.v.title !== null || vm.v.title !== '') {
+	        	desc1 = vm.v.title;
+	        }else{
+	        	desc1 = vm.v.content.substr(0, 50);
+	        }
+	    }
+        share = {
+            title : title1,
+            desc : desc1,
+            img : 'http://picproc.inmeapp.com/wechatshare/inme_512.png'
+        };
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

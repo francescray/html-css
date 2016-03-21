@@ -1,0 +1,47 @@
+#goods-item .goods-article{
+	margin: 0 12px;
+}
+#goods-item .goods-article .goods-titile{
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	line-height:150%;
+	color:rgb(81,183,241);
+}
+#goods-item .goods-article .authorid{
+	width:120px;
+	font-size: 11px;
+	float: left;
+	line-height:24px;
+	color:rgb(164,169,174);
+}
+#goods-item .goods-article .author-time{
+	font-size: 11px;
+	line-height: 24px;
+	color:rgb(164,169,174);
+	width: 70px;
+	float: right;
+	padding-left: 15px;
+	background: url('../img/static/clock.png') no-repeat left;
+	background-position: left center;
+    background-size: 10.5px 10.5px;
+}
+#goods-item .goods-article .author-title{
+	font-size: 11px;
+	width: 100%;
+	padding-bottom: 5.5px;
+	display: inline-block;
+	line-height:182%;
+	color:rgb(164,169,174);
+}
+#goods-item .goods-article .goods-content{
+	font-size: 14px;
+	line-height: 25px;
+	color: rgb(141,147,154);
+	margin-bottom: 75px;
+}
+#goods-item .goods-article .goods-content p {
+	margin-bottom: 25px;
+}
+
+

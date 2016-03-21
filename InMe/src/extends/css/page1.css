@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+#page1 .description-display{
+	margin: 0 30px;
+}
+#page1 .description-display .round{
+	margin: 22px auto;
+	margin-bottom: 13px;
+	height: 92.5px;
+	width: 92.5px;
+	background: url('../round.png') no-repeat center;
+	background-size:92.5px 92.5px ;
+	font-size:24px;
+	line-height:89px;
+	color:rgb(255,255,255);
+	text-align: center;
+}
+#page1 .description-display .levelnum {
+	width: 100%;
+	height: 20px;
+}
+#page1 .description-display .levelnum .levelnum-beg{
+	font-size:12px;
+	line-height:167%;
+	color:rgb(81,183,241);
+	float: left;
+}
+#page1 .description-display .levelnum .levelnum-end{
+	font-size:12px;
+	line-height:167%;
+	color:rgb(81,183,241);
+	float: right;
+}
+#page1 .description-display .progess-bar{
+	background-color:rgb(233,235,237);
+	width: 100%;
+	height:8px;
+	border-radius: 10px;
+}
+#page1 .description-display .progess-bar .precent {
+	position: relative;
+    background-color:rgb(81,184,242);       
+    width: 0%;
+    height: 100%;
+    -webkit-transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
+#page1 .description-display .progess-bar .precent .ball {
+	position:absolute;
+	bottom: -2px;
+	right: 0px;
+	height: 6px;
+	width:6px; 
+	border-radius:50%;
+	background-color:rgb(255,255,255);
+	border:3px solid rgb(81,184,242);
+}
+#page1 .description-display .experience{
+	margin-top: 20px;
+	width: 100%;
+	height: 20px;
+}
+#page1 .description-display .experience .experience-label{
+	font-size:12px;
+	line-height:20.5px;
+	color:rgb(151,159,165);
+	text-align:center;
+	background-color:rgb(245,245,245);
+	width:45px;
+	height:19px;	
+	display: inline-block;
+	border-radius: 3px;
+}
+#page1 .description-display .experience .experience-detail{
+	font-size:12px;
+	line-height:20.5px;
+	text-align:center;
+	display: inline-block;
+	color:rgb(152,159,166);
+}
+#page1 .description-display .experience .experience-detail a{
+	font-size:12px;
+	line-height:20.5px;
+	color:rgb(255,169,83);
+}
+#page1 .description-display .integral{
+	margin: 7px 0px 10px 0px;
+	width: 100%;
+	height: 20px;
+}
+#page1 .description-display .integral .integral-label{
+	font-size:12px;
+	line-height:20.5px;
+	color:rgb(151,159,165);
+	text-align:center;
+	background-color:rgb(245,245,245);
+	width:45px;
+	height:19px;	
+	display: inline-block;
+	border-radius: 3px;
+}
+#page1 .description-display .integral .integral-num{
+	font-size:12px;
+	line-height:20.5px;
+	color:rgb(255,169,83);
+	text-align:left;
+	display: inline-block;
+}
+#page1 .tips .step{
+	padding: 24px 0;
+	border-top: 1px solid rgb(230,230,230);
+}
+#page1 .tips .step .title-up1{
+	margin: 0 30px;
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_up.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+}
+#page1 .tips .step .title-down1{
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_down.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+
+}
+#page1 .tips .step .detail1{
+	margin: 0 30px;
+	font-size:13px;
+	line-height:123%;
+	color:rgb(113,120,127);
+	padding-left: 8px;
+	display: none;
+}
+#page1 .tips .step .title-up2{
+	margin: 0 30px;
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_up.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+}
+#page1 .tips .step .title-down2{
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_down.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+
+}
+#page1 .tips .step .detail2{
+	margin: 0 30px;
+	font-size:13px;
+	line-height:123%;
+	color:rgb(113,120,127);
+	padding-left: 8px;
+	display: none;
+}
+
+#page1 .tips .step .title-up3{
+	margin: 0 30px;
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_up.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+}
+#page1 .tips .step .title-down3{
+	font-size:14px;
+	line-height:86%;
+	color:rgb(80,85,89);
+	padding-bottom: 10px;
+	background: url('../arror_down.png') no-repeat right top 1px;
+	background-size:7.5px 3.5px ;
+
+}
+#page1 .tips .step .detail3{
+	margin: 0 30px;
+	font-size:13px;
+	line-height:123%;
+	color:rgb(113,120,127);
+	padding-left: 8px;
+	display: none;
+}
+#page1 .tips .step:last-child {     
+   	border-bottom: 1px solid rgb(230,230,230);
+}

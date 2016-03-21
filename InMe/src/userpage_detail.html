@@ -1,0 +1,23 @@
+@@include('include/header.html')
+<body id="userpage-detail">
+    <div class="article">{{{content}}}</div>
+    <script type="application/javascript">
+    uid : getUrlParam('uid')
+    vm = new Vue({
+        el : '#userpage-detail',
+        data : {
+			content : ''
+        }
+    });
+    var get = {
+        uid : getUrlParam('uid')
+    };
+    $.getJSON(url('userpage/shareFetchDescription'), get, function(data) {
+        if (data.code == '0') {
+            vm.content = data.data;
+            vm_title.title = '详细介绍';
+        }
+    });
+    </script>
+</body>
+</html>

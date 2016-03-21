@@ -1,0 +1,118 @@
+@@include('include/header.html')
+<body id="article">
+	<header>
+		<a href="article_list.html?classid={{ v.classid }}" ><div class="logo">{{ v.classname }}</div></a>
+	</header>
+	<div class="page1">
+		<div class="article-title">{{ v.title }}</div>
+		<div class="person-abstract">
+			<div class="left"><img :src="v.headportrait" width="100%"></div>
+			<div class="center">{{ v.nickname }}</div>
+			<div class="nickname {{ v.usertype | userTypeclass }}">{{ v.usertype | userTypename }}</div>
+			<div class="watchnum">{{ v.viewnum }}</div>
+			<div class="eye">&nbsp;&nbsp;&nbsp;</div>
+			<div class="time">{{ v.time | timestampformat 'yyyy-MM-dd' }}</div>
+		</div>
+		<div class="content">
+			<div class="title-page" :style="{ backgroundImage: 'url(' + v.img + '@690w_250h_90Q_0e' + ')' }"></div>
+			<div class="titlepage-mean">{{v.articledesc}}</div>
+			{{{ v.content }}}
+		</div>
+		<ul class="page-label">
+            <li v-for="tag in v.tags" class="label1"><a href="article_list.html?classid={{ tag.id }}" >{{ tag.name }}</a></li>
+        </ul>
+	</div>
+	<div class="divider-bar"></div>
+	<div v-if="v.recommends.id" class="recommend-read">
+		<div class="recommend">推荐阅读</div>
+		<div class="content">
+			<a href="article.html?id={{ v.recommends.id }}" class="block">
+				<div class="article_bg" :style="{ backgroundImage: 'url(' + v.recommends.img + '@690w_262h_90Q_0e' + ')' }">
+					<div class="article_author_pic">
+						<img :src="v.recommends.headportrait" width="26px" height="26px">
+					</div>
+				</div>
+				<div class="article_title">{{ v.recommends.title }}</div>
+				<div class="article_content">{{ v.recommends.articledesc }}</div>
+				<div class="article_label">{{ v.recommends.classname }}</div>
+				<div class="article_watchnum">{{ v.recommends.viewnum }}</div>
+			</a>
+		</div>
+		<div v-if="v.recommends.id2" class="ext-recommend"><a href="article.html?id={{ v.recommends.id2 }}">{{ v.recommends.title2 }}</a></div>
+		<div v-if="v.recommends.id3" class="ext-recommend"><a href="article.html?id={{ v.recommends.id3 }}">{{ v.recommends.title3 }}</a></div>
+		<div v-if="v.recommends.id4" class="ext-recommend"><a href="article.html?id={{ v.recommends.id4 }}">{{ v.recommends.title4 }}</a></div>
+	</div>
+	<div class="divider-bar"></div>
+	<div v-if="v.replynum" class="comment">
+		<div class="reply-number">{{ v.replynum }}条评论</div>
+		<template v-for="reply in v.replies">
+			<div class="onecomment">
+				<div class="man-abstract">
+					<div class="left"><img :src="reply.headportrait"  width="100%"></div>
+					<div class="center">
+						<div class="leftcenter">
+							{{ reply.nickname }}&nbsp;
+							<div class="title {{ reply.usertype | userTypeclass }}">{{ reply.usertype | userTypename }}</div> <br>
+							<a>{{ reply.time | timestampformat 'yyyy-MM-dd' }}</a>
+						</div>
+					</div>
+					<div class="gap"></div>
+					<div class="rightcenter"></div>
+					<div class="right"></div>
+				</div>
+				<div class="reply-content">{{{ reply.content }}}</div>
+			</div>
+		</template>
+	</div>
+	<div class="more">
+		<div class="clickmore"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">下载应用看到更多精彩回复</a></div>
+	</div>
+	<footer class="border">
+    	<a class="btn-down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多内容下载InMe心迹APP</a>
+   		<a class="btn-test" href="article.html?isnext=1&id={{ id }}" style="width: 67px;">换一篇</a>
+	</footer>
+
+<script type="application/javascript">
+	vm = new Vue({
+		el : '#article',
+		data : {
+			v : {
+				recommends : {}
+			},
+			id : getUrlParam('id')
+		}
+	});
+	var get = {
+		id : getUrlParam('id'),
+		isnext : getUrlParam('isnext')
+	};
+	$.getJSON(url('homepage/shareFetchArticle'), get, function(data) {
+		if (data.code == '0') {
+			vm.v = data.data;
+			vm_title.title =  data.data.title;
+		}
+		wx_share();
+	});
+
+    function wx_share() {
+    	var share;
+    	var path_url = window.location.href;
+    	var desc;
+	    if(typeof(vm.v.articledesc)!== 'undefined'){
+        	if (vm.v.articledesc !== null || vm.v.articledesc !== '') {
+	        	desc = vm.v.articledesc;
+	        }else{
+	        	desc = vm.v.title;
+	        }
+	    } 
+        share = {
+            title : vm.v.title,
+            desc : desc,
+            img : vm.v.img,
+            link : path_url.replace("&isnext=","")
+        };
+        initWechat(share);
+    }
+</script>
+</body>
+</html>

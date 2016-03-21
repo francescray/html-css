@@ -1,0 +1,131 @@
+#topic .topic-body{
+	border-bottom: solid 12px #E6E6E6;
+	padding-bottom: 20px;
+}
+#topic .topic-body .article-title{
+	margin:15px;
+	font-size:21px;
+	line-height:150%;
+	font-weight:bold;
+	color:rgb(41,41,41);
+	text-align:left;
+}
+#topic .topic-body .topic-content{
+	margin:4px 15px 5px 15px;
+	display: inline-block;
+	font-size: 14px;
+	line-height:150%;
+	color:rgb(41,41,41);
+}
+#topic .topic-body .topic-picture {
+	margin: 0 15px;
+	font-size: 0;
+	-webkit-text-size-adjust:none;
+}
+#topic .topic-body .topic-picture > div {
+	margin-right:5%;
+	margin-top: 10px;
+	width: 30%;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+}
+#topic .topic-body .topic-picture > div:nth-child(3n) {
+	margin-right: 0!important;
+}
+#topic .topic-body .topic-picture > div:before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+#topic .topic-body .topic-picture img {
+	border-radius: 3px;
+}
+#topic .topic-body .label{
+	margin:20px 10px 0px 12px;
+	font-size: 13px;
+	background: url('../img/static/good.png') no-repeat;
+	background-position: right center;
+	background-size: 15px 16px;
+	line-height:162%;
+	color:rgb(12,12,12);
+}
+#topic .reply-number{
+	margin:17px 15px 8px 15px;
+	font-size: 15px;
+	line-height:140%;
+	color:rgb(41,41,41);
+}
+#topic .reply-content{
+	margin:3px 0 0 45px;
+	padding-bottom:23px;
+	padding-right: 12px;
+	font-size: 12.5px;
+	line-height:156%;
+	color:rgb(89,89,89);
+	border-bottom: solid 1px #F4F4F4;
+}
+#topic .reply-content a{
+	font-size: 12.5px;
+	display: inline-block;
+	line-height:156%;
+	color:rgb(81,183,241);
+}
+#topic .discussbox{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 54px;
+	border-top: 1px solid rgb(230,230,230);
+	text-align: center;
+	padding: 0 15px;
+	background: #FFF;
+}
+#topic .discussbox .joindiscuss {
+	display: block;
+	box-sizing: border-box;
+	text-align: left;
+	width: 100%;
+	padding: 8px 9px;
+	font-size: 13px;
+	margin:10px 0;
+	border: 1px solid rgb(230,230,230);
+	color:rgb(97,97,97);
+	border-radius: 3px;
+}
+#topic .click-sharing{
+	position:absolute;
+	width: 100%;
+	height: 200%;
+	background: rgba(178,178,178,0.9);
+	z-index: 100;
+	top:0;
+}
+#topic .click-sharing .DRcode{
+	position: fixed;
+	width: 100%;
+	height: 165px;
+	background:url('../img/static/DRcode.png') no-repeat center;
+	background-size: 150px 165px;
+	bottom: 91px;
+}
+#topic .click-sharing .DRcodeshare{
+	position: fixed;
+	width: 30%;
+	height:  55.5px;
+	background:url('../img/static/DRcodeshare.png') no-repeat center;
+	background-size: 55.5px 55.5px;
+	bottom: 41px;
+}
+#topic .click-sharing .DRcodewrite{
+	position: fixed;
+	right: 0px;
+	width: 30%;
+	height:  55.5px;
+	background:url('../img/static/DRcodewrite.png') no-repeat center;
+	background-size: 55.5px 55.5px;
+	bottom: 41px;
+}
