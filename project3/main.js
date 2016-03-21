@@ -19,6 +19,6 @@ $(function() {
 		}
 	})
 	$('.front-cover  .container .search .center .search-botton').click(function() {
-		window.location.href="www.baidu.com";
+		window.location.href="http://www.baidu.com";
 	})
 });

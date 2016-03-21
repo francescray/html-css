@@ -106,7 +106,7 @@ body{
 .three-option .release-news {
 	width: 253px;
 	padding: 0px 8px;
-	display:inline-block;
+	float: left;
 }
 .three-option .release-news .rn{
 	height: 42px;
@@ -134,9 +134,9 @@ body{
 	text-align: center;
 }
 .three-option .message-list {
-	display:inline-block;
 	width: 253px;
 	padding: 0px 8px;
+	float: left;
 }
 .three-option .message-list .ml{
 	height: 42px;
@@ -165,9 +165,9 @@ body{
 	text-align: center;
 }
 .three-option .personal-center {
-	display:inline-block;
 	width: 253px;
 	padding: 0px 8px;
+	float: left;
 }
 .three-option .personal-center .pc{
 	height: 42px;
