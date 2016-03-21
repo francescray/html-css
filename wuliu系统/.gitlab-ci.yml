@@ -1,0 +1,57 @@
+variables:
+  WEB_ROOT: "/www/dev/wuliu-test/wuliu"
+  UPLOAD_PATH: "/www/dev/wuliu-test/uploads"
+  DB_HOST: "127.0.0.1"
+  DB_DATABASE: "wuliu"
+  DB_USERNAME: "wuliu"
+  DB_PASSWORD: "9NR@QqCrj3FrTu4Dr"
+
+stages:
+  - test
+
+cache:
+  key: "test"
+  paths:
+    - .env
+
+before_script:
+  - mkdir -p $CI_PROJECT_DIR/../wuliu.tmp/vendor
+  - ln -s $CI_PROJECT_DIR/../wuliu.tmp/vendor vendor
+  - mkdir -p $CI_PROJECT_DIR/../wuliu.tmp/node_modules
+  - ln -s $CI_PROJECT_DIR/../wuliu.tmp/node_modules node_modules
+
+pre_install_job:
+  stage: test
+  script:
+    - composer install --prefer-dist
+    - npm install
+    - chmod 777 storage/ -R
+    - chmod 777 bootstrap/cache/ -R
+
+pre_env_job:
+  stage: test
+  script:
+    - \cp -f .env.example .env
+    - sed -i "s/\(DB_HOST *= *\).*/\1$DB_HOST/" .env
+    - sed -i "s/\(DB_DATABASE *= *\).*/\1$DB_DATABASE/" .env
+    - sed -i "s/\(DB_USERNAME *= *\).*/\1$DB_USERNAME/" .env
+    - sed -i "s/\(DB_PASSWORD *= *\).*/\1$DB_PASSWORD/" .env
+
+build_job:
+  stage: test
+  script:
+    - php artisan key:generate
+    - php artisan migrate
+    - php artisan db:seed
+
+test_job:
+  stage: test
+  script:
+    - pwd
+
+deploy_job:
+  stage: test
+  script:
+    - rm $WEB_ROOT -f
+    - ln -s $CI_PROJECT_DIR $WEB_ROOT
+    - ln -s $UPLOAD_PATH $CI_PROJECT_DIR/public/uploads

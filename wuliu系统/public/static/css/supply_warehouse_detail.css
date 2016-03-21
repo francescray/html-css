@@ -1,0 +1,338 @@
+.detail-body{
+	margin: 14px 0px 75px 0px;
+	overflow: hidden;
+}
+.detail-body .detail-message{
+	background-color: #FFFFFF;
+	float: left;
+}
+.detail-body .detail-message .page-front{
+	overflow:hidden;
+	padding: 28px 20px 20px 20px;
+}
+.detail-body .detail-message .page-title{
+	float: left;
+	font-size:18px;
+	line-height:20px;
+	color:rgba(75,171,225,0.8);
+}
+.detail-body .detail-message .page-watch{
+	float: right;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(179,179,179);
+	margin-top: 10px;
+	padding-right: 22px;
+}
+.detail-body .detail-message .page-time{
+	margin-top: 10px;
+	padding-right: 4px;
+	float: right;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(179,179,179);
+}
+.detail-body .detail-message .page-update{
+	margin-top: 10px;
+	padding-right: 10px;
+	float: right;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(179,179,179);
+}
+.detail-body .detail-message .page-pic{
+	background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+	width:595px ;
+	height: 374px;
+	margin: 0px 20px;
+}
+.detail-body .detail-message .price-message{
+	overflow: hidden;
+	margin:13px 24px;
+	border: solid 1px rgb(230,230,230);
+	padding-left: 15px;
+}
+.detail-body .detail-message .price-message .detail{
+	font-size:30px;
+	font-weight:bold;
+	line-height:30px;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top: 13px;
+	margin-right: 4px;
+}
+.detail-body .detail-message .price-message .detail-type{
+	font-size:12px;
+	line-height:12px;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top: 25px;
+	margin-right: 30px;
+}
+.detail-body .detail-message .price-message .load{
+	font-size:14px;
+	line-height:14px;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top: 24px;
+	margin-right: 30px;
+	font-weight:bold;
+}
+.detail-body .detail-message .price-message .claim{
+	float: left;
+	font-size:12px;
+	line-height:183%;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top: 22px;
+}
+.detail-body .detail-message .price-message .cooperation-intention{
+	float: right;
+	font-size:18px;
+	line-height:52px;
+	color:rgb(255,255,255);
+	padding: 0px 25px;
+	background: url('../img/mail-connect.png') no-repeat center left 25px ;
+	background-size: 20px 16px;
+	padding-left: 52px;
+	background-color:rgb(199,82,75);
+	cursor: pointer;
+}
+.detail-body .detail-message .page-options{
+	border-bottom: solid 1px rgb(76,172,226);
+	overflow: hidden;
+}
+.detail-body .detail-message .page-options >div{
+	float: left;
+	font-size:18px;
+	line-height:306%;
+	color:rgb(140,140,140);
+	padding: 0 28px;
+}
+.detail-body .detail-message .page-options .select{
+	font-size:18px;
+	line-height:306%;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+}
+
+
+.detail-body .message-list{
+	margin-left: 645px;
+}
+.detail-body .message-list .control-message{
+	overflow: hidden;
+	background-color: #FFFFFF;
+	margin-bottom: 18px;
+}
+.detail-body .message-list .control-message a{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+}
+.detail-body  .message-list .control-message >div{
+	float: left;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	padding: 0px 20px;
+	background-color: rgb(76,172,226);
+	margin: 20px 8px 20px 30px;
+}
+.detail-body .message-list .detail-dynamic{
+	background-color: #FFFFFF;
+}
+.detail-body .detail-dynamic .leave-message{
+	overflow: hidden;
+	padding: 15px 30px 12px 30px;
+} 
+.detail-body .detail-dynamic .leave-message .dmessage{
+	float: left;
+	font-size:18px;
+	line-height:18px;
+	color:rgba(71,71,73,0.8);
+	padding-top: 8px;
+	padding-right: 180px;
+}
+.detail-body .detail-dynamic .leave-message .imessage{
+	float: right;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+	padding: 0 20px;
+	border-radius: 3px;
+}
+.detail-body .detail-dynamic .comments{
+	overflow: hidden;
+	padding:12px 30px;
+}
+.detail-body .detail-dynamic .comments .people{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgba(71,71,73,0.8);
+	padding-right: 6px;
+}
+.detail-body .detail-dynamic .comments .watch-message{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgba(71,71,73,0.8);
+}
+.detail-body .detail-dynamic .comments .people-comment{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(115,204,237);
+}
+.detail-body .detail-dynamic .comments .self-comment{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(217,148,145);
+}
+.detail-body .detail-dynamic .comments .comments-time{
+	float: right;
+	font-size:11px;
+	line-height:12px;
+	color:rgba(169,169,170,0.8);
+}
+ 
+
+/*
+  personal detail
+*/
+.page-detail{
+	margin:0px 28px;
+	color: rgb(121,121,122);
+	overflow: hidden;
+}
+.company-title{
+	border-top:  dashed 1px rgb(230,230,230);
+	padding-top: 24px;
+	font-size: 16px;
+	line-height: 20px;
+}
+.company-type{
+	font-size: 12px;
+	line-height: 14px;
+	padding-top: 5px;
+}
+.companypersonal-message{
+	font-size: 14px;
+	line-height: 14px;
+	margin-top: 30px;
+}
+.companypersonal-message td{ 
+	padding: 10px 0px;
+}
+.companypersonal-message .company-label{
+	padding-left: 5px;
+	width:70px;
+}
+.companypersonal-message .company-money{
+	color: rgb(211,128,123);
+}
+.companypersonal-message .company-address a{
+	color:rgb(135,195,234);
+	font-size: 14px;
+	line-height: 14px;
+}
+.companypersonal-message .company-address .companymap{
+	color:rgb(135,195,234);
+	font-size: 14px;
+	line-height: 14px;
+	background: url('../img/location.png') no-repeat center left;
+	background-size: 12px 16px;
+	padding-left: 15px;
+}
+.companypersonal-message .company-pay{
+	overflow: hidden;
+}
+.companypersonal-message .company-pay li{
+	background: rgb(248,248,248);
+	color: rgb(105,104,104);
+	border: solid 1px rgb(214,214,214);
+	float: left;
+	line-height: 20px;
+	padding: 0 8px;
+	margin-left: 8px;
+}
+.companypersonal-message .company-phone{
+	color: rgb(199,82,75);
+	font-size: 25px;
+	line-height: 27px;
+}
+.companypersonal-message .company-phone a{
+	color:rgb(135,195,234);
+	font-size: 12px;
+	line-height: 12px;
+}
+.company-intention{
+	float: left;
+	font-size:18px;
+	line-height:52px;
+	color:rgb(255,255,255);
+	padding: 0px 25px;
+	background: url('../img/mail-connect.png') no-repeat center left 25px ;
+	background-size: 20px 16px;
+	padding-left: 52px;
+	background-color:rgb(199,82,75); 
+	margin: 30px 0;
+}
+
+.coop-dialog table {
+	margin: 20px auto;
+	width: 85%;
+	font-size: 14px;
+	color: #333;
+}
+.coop-dialog td {
+	padding: 5px;
+}
+.coop-dialog input, .coop-dialog textarea {
+	width: 350px;
+	padding: 6px;
+	border: solid 1px rgb(204,204,204);
+}
+.coop-dialog td:first-child {
+	text-align: right;
+}
+.coop-dialog button {
+	border: none;
+	border-radius: 3px;
+	background: #4CACE2;
+	padding: 10px 25px;
+	color: #FFF;
+}
+
+.lmessage-dialog table {
+	margin: 20px auto;
+	width: 85%;
+	font-size: 14px;
+	color: #333;
+}
+.lmessage-dialog td {
+	padding: 5px;
+}
+.lmessage-dialog input {
+	border: solid 1px rgb(204,204,204);
+}
+.lmessage-dialog input, .lmessage-dialog textarea {
+	width: 350px;
+	padding: 6px;
+	border: solid 1px rgb(204,204,204);
+}
+.lmessage-dialog td:first-child {
+	text-align: right;
+}
+.lmessage-dialog button {
+	border: none;
+	border-radius: 3px;
+	background: #4CACE2;
+	padding: 10px 25px;
+	color: #FFF;
+}

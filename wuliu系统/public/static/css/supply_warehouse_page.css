@@ -1,0 +1,23 @@
+.mainbody .right .firstpart{
+	margin: 0px 16px 0 20px;
+	padding-top:25px;
+	padding-bottom: 16px;
+	overflow: hidden;
+	border-bottom:solid 1px rgb(230,230,230);
+}
+.mainbody .right .firstpart .title{
+	font-size:18px;
+	color:rgb(101,101,101);
+	float:left;
+}
+.mainbody .right .firstpart .messagecount{
+	color:rgb(71,71,72);
+	font-size:12px;
+	float: left;
+	padding-top: 6px;
+	padding-left: 16px;
+}
+.mainbody .right .firstpart .messagecount a{
+	color: rgb(199,82,75);
+}
+

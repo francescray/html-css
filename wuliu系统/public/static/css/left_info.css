@@ -1,0 +1,40 @@
+
+/*  
+	填写申请表 左侧导航栏  与右侧表格栏
+*/
+.mainbody .left ul{
+	list-style:none;
+	margin:0px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+.mainbody .left a {
+	display: block;
+	font-size:16px;
+	line-height:52px;
+	color:rgb(147,147,147);
+	width: 200px;
+	height: 52px;
+	text-align: center;
+	background-color: rgb(255,255,255);
+}
+.mainbody .left li a{
+	color:rgb(147,147,147);
+	display: block;
+}
+.mainbody .left li a:hover{
+	background-color: #EEE;
+}
+.mainbody .left .select a {
+	background-color:rgb(247,247,247)!important;
+	color: rgb(76,172,226) !important;
+}
+.mainbody .left .sd{
+	color:rgb(255,255,255) ;
+	background-color: rgb(76,172,226) ;
+	font-size:18px;
+	line-height:52px;
+	width: 200px;
+	height: 52px;
+	text-align: center;
+}

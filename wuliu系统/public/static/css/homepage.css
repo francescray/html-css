@@ -1,0 +1,235 @@
+body{
+	margin: 0;
+	line-height: 1.5;
+	text-align: center;
+	font-family: arial, 'Microsoft Yahei', sans-serif;
+	background: rgb(255,255,255) !important;
+}
+.container {
+ 	margin: 0 auto; 
+ 	width: 960px
+} 
+.front-cover{
+	background-image: url('../img/fcbg.png');
+	background-size: cover;
+	background-repeat: no-repeat; 
+	padding-bottom: 28px;
+}
+.front-cover .title {
+	padding-top: 50px;
+	font-size:36px;
+	line-height:153%;
+	color:rgb(255,255,255);
+	text-align:center;
+	font-weight: 600;
+	-webkit-text-stroke:1px rgb(165,185,249);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#FFFFFFFF,endcolorstr=#FFFFFFFF);/*后的filter为兼容IE*/
+}
+.front-cover .search{
+	margin: 18px auto;
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#32FFFFFF,endcolorstr=#32FFFFFF);/*后的filter为兼容IE*/
+	border-radius: 4px;
+	background-color:rgba(255,255,255,0.5);
+	width:800px;
+	height:140px;
+}
+.front-cover .search .search-option{
+	font-size:16px;
+	font-weight:bold;
+	color:rgb(71,71,71);
+	margin-left: 16px;
+	padding-top: 28px;
+	overflow: hidden;
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	text-shadow:0px 0px 7px rgba(255,255,255,0.35);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Glow(Color=#59fe.ffff04577d98fe.fffc0096feb8ff,Strength=7)";zoom:1;
+	filter:progid:DXImageTransform.Microsoft.Glow(Color=#59fe.ffff04577d98fe.fffc0096feb8ff,Strength=7);
+}
+.front-cover .search .search-option> div {
+	float: left;
+	line-height: 34px;
+	text-align: center;
+	border-radius: 4px;
+	padding: 0 20px;
+}
+.front-cover .search .search-option .select {
+	background: rgba(255, 255, 255, 0.35);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#23FFFFFF,endcolorstr=#23FFFFFF);/*后的filter为兼容IE*/
+}
+.front-cover .search .arrow{
+	height: 7px;
+	text-align:center;
+	margin-left: 16px;
+}
+.front-cover .search .arrow .sbottom{
+	position: absolute;
+	height: 7px;
+	width: 20px;
+	background:url(../img/arrow.png) no-repeat;
+	background-size:20px 7px ;
+}
+.front-cover .search .sbox{
+	width:597px;
+	height:49px;
+	margin-left: 16px;
+	float: left;
+}
+.front-cover .search .sbox .search-box{
+	padding-left: 15px;
+	border: 0px solid white; 
+	background-color:rgb(255,255,255);
+	width:597px;
+	height:49px;
+}
+.front-cover .search .search-botton{
+	float: left;
+	width: 50px;
+	height: 49px;
+	background:url(../img/searchbottom.png) no-repeat;
+	background-size:50px 49px ;
+	margin-right: 18px;
+	cursor: pointer;
+}
+.front-cover .search .map-search{
+	float: left;
+	background:url(../img/serachmap.png) no-repeat;
+	background-size:102px 48px ;
+	width: 102px;
+	height: 49px;
+}
+.opt{
+	width: 100%;
+}
+.three-option a {
+	color:#5BA6FE;
+}
+.opt .three-option{
+	margin:20px auto 75px;
+	width: 1000px;
+	text-align: center;
+	overflow: hidden;
+	text-align: center;
+}
+.three-option .release-news {
+	float: left;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.three-option .release-news .rn{
+	line-height: 24px;
+	padding:20px 0px;
+	text-align: center;
+	font-size:24px;
+	font-weight:bold;
+	color:rgb(71,71,71);
+}
+.three-option .release-news .pen{
+	background:url('../img/bg1.png') no-repeat;
+	background-size: 235px 235px;
+	background-position: center;
+	width:100%;
+	height: 235px;
+	margin-bottom: 25px;
+}
+.three-option .release-news .pen .photo1{
+	height: 235px;
+	width: 84px;
+	text-align:center;
+	margin:auto;
+	background:url('../img/pen.png') no-repeat center;
+	background-size: 84px 84px;
+}
+.three-option .release-news .rndetail{
+	font-size:12px;
+	color:rgb(71,71,71);
+	line-height: 12px;
+	margin-bottom: 12px;
+}
+.three-option .release-news .gorelease{
+	font-size:14px;
+	font-weight:bold;
+	color:rgb(91,166,254);
+
+}
+.three-option .message-list {
+	float: left;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.three-option .message-list .ml{
+	line-height: 24px;
+	padding:20px 0px;
+	text-align: center;
+	font-size:24px;
+	font-weight:bold;
+	color:rgb(71,71,71);
+}
+.three-option .message-list .list{
+	background:url('../img/bg2.png') no-repeat;
+	background-size: 235px 235px;
+	background-position: center;
+	width:100%;
+	height: 235px;
+	margin-bottom: 25px;
+}
+.three-option .message-list .list .photo2{
+	height: 235px;
+	width: 84px;
+	text-align:center;
+	margin:auto;
+	background:url('../img/list.png') no-repeat center;
+	background-size: 84px 84px;
+}
+.three-option .message-list .mldetail{
+	font-size:12px;
+	color:rgb(71,71,71);
+	line-height: 12px;
+	margin-bottom: 12px;
+}
+.three-option .message-list .goshare{
+	font-size:14px;
+	line-height: 14px;
+	font-weight:bold;
+	color:rgb(91,166,254);
+}
+.three-option .personal-center {
+	float: left;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.three-option .personal-center .pc{
+	line-height: 24px;
+	padding:20px 0px;
+	text-align: center;
+	font-size:24px;
+	font-weight:bold;
+	color:rgb(71,71,71);
+}
+.three-option .personal-center .people{
+	background:url('../img/bg3.png') no-repeat;
+	background-size: 235px 235px;
+	background-position: center;
+	width:100%;
+	height: 235px;
+	margin-bottom: 25px;
+}
+.three-option .personal-center .people .photo3{
+	height: 235px;
+	width: 84px;
+	text-align:center;
+	margin:auto;
+	background:url('../img/people.png') no-repeat center;
+	background-size: 84px 84px;
+}
+.three-option .personal-center .pcdetail{
+	font-size:12px;
+	color:rgb(71,71,71);
+	line-height: 12px;
+	margin-bottom: 12px;
+}
+.three-option .personal-center .gomanage{
+	font-size:14px;
+	font-weight:bold;
+	color:rgb(91,166,254);
+	line-height: 14px;
+}

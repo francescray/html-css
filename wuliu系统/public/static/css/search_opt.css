@@ -1,0 +1,294 @@
+.the-options .one-opt{
+	overflow: hidden;
+}
+.the-options .one-opt .opt-name{
+	float: left;
+	font-size:12px;
+	line-height:30px;
+	color:#000000;
+	padding: 10px 20px;
+	padding-right: 12.5px;
+}
+.the-options ul{
+	overflow: hidden;
+	font-size:12px;
+	line-height:258%;
+	color:rgb(71,71,72);
+	float: left;
+}
+.the-options li{
+	float: left;
+	padding: 10px 7.5px;
+}
+.the-options .select a{
+	color: rgb(0,181,107);
+}
+.hardware{
+	background-color: rgb(251,251,251);
+}
+.hardware .ano-opt{
+	border-bottom: solid 1px rgb(230,230,230) ;
+	overflow: hidden;
+}
+.hardware .ano-opt .opt-name{
+	font-size:12px;
+	line-height:30px;
+	color:#000000;
+	padding: 7px 20px;
+	float: left;
+}
+.hardware  .ano-opt >select{
+	float: left;
+	height: 22px;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(71,71,72);
+	margin: 12px 12px 7px 0px;
+	padding: 0px 4px 0px 5px;
+}
+.hardware .ano-opt ul{
+	height: 48px;
+	float: left;
+}
+.hardware .ano-opt li{
+	float: left;
+	line-height: 48px;
+	font-size:12px;
+	color:rgb(71,71,72);
+	padding: 0px 15px;
+	background-color: rgb(251,251,251);
+}
+ .hardware .ano-opt .select{
+	background-color: #FFFFFF;
+	border-left: solid 1px rgb(230,230,230) ;
+	border-right: solid 1px rgb(230,230,230) ;
+}
+.hardware .ano-opt .sort{
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	margin:0px;
+	padding: 0px;
+	border: 0px;
+	background-color: rgb(251,251,251);
+}
+
+
+/*
+	仓库商品详情
+*/
+.mainbody .right .secondpart{
+	overflow: hidden;
+}
+.mainbody .right .secondpart .goods-list{
+	padding:10px 16px 0px 12px;
+	background-color: #FFFFFF;
+}
+.goods-list .goods-one{
+	border-bottom: solid 1px rgb(230,230,230) ;	
+	overflow: hidden;
+}
+.goods-list .goods-one .goods-pic{
+	background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+	width: 80px;
+	height: 60px;
+	margin:12px 20px 0 10px;
+	float: left;
+}
+.goods-list .goods-one .goods-detail{
+	padding: 12px 0px;
+	float: left;
+	width: 45%;
+	overflow: hidden;
+}
+.goods-list .goods-one .goods-detail .first-line{
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 18px;
+}
+.goods-list .goods-one .goods-detail .first-line .detail-title{
+	float: left;
+	color: rgb(56,0,224);
+}
+.goods-list .goods-one .goods-detail .first-line .detail-title a{
+	color: rgb(56,0,224);
+}
+.goods-list .goods-one .goods-detail .first-line .detail-loc{
+	float: left;
+	color: rgb(129,129,129);
+	padding: 0px 2px;
+	margin:0px 2px;
+}
+.goods-list .goods-one .goods-detail .first-line .detail-logo{
+	background: url('../img/detail-loc.png') no-repeat top left;
+	background-size: 13px 14px;
+	height: 14px;
+	width: 13px;
+	margin-top: 2px;
+	float: left;
+}
+.goods-list .goods-one .goods-detail .first-line .detail-year{
+	color: rgb(255,53,0);
+	float: left;
+	border: solid 1px rgb(255,196,174);
+	background-color: rgb(255,241,229);
+	border-left: 0px;
+	border-radius: 0px 10px 10px 0px;
+	padding-right:4px ;
+}
+.goods-list .goods-one .goods-detail .first-line .pic-num{
+	float: left;
+	color: rgb(54,182,61);
+	margin:0px 2px;
+}
+.goods-list .goods-one .goods-detail .first-line .detail-type{
+	float: left;
+	background-color: rgb(253,133,6);
+	color: #FFFFFF;
+	padding:0 2px;
+}
+.goods-list .goods-one .goods-detail .second-line {
+	font-size: 12px;
+	color: rgb(103,103,103);
+	line-height: 18px;
+	padding: 16px 0px;
+	overflow: hidden;
+	text-align: left;
+}
+.goods-list .goods-one .goods-detail .third-line {
+	font-size: 12px;
+	color: rgb(103,103,103);
+	line-height: 12px;
+	overflow: hidden;
+}
+.goods-list .goods-one .goods-detail .third-line .update-time{
+	float: left;
+}
+.goods-list .goods-one .goods-detail .third-line .time{
+	float: left;
+}
+.goods-list .goods-one .goods-price{
+	float: right;
+	padding-top: 30px;
+	padding-right: 60px;
+	overflow: hidden;
+}
+.goods-list .goods-one .goods-area{
+	float: right;
+	padding-top: 30px;
+	padding-right: 66px;
+	overflow: hidden;
+}
+.goods-list .goods-one  .price-num{
+	float: left;
+	color: rgb(255,0,0);
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+}
+.goods-list .goods-one .unit{
+	float: left;
+	font-size: 12px;
+	color: rgb(103,103,103);
+	line-height: 12px;
+}
+.page-jump{
+	margin-left: 180px;
+	padding-bottom: 40px;
+	margin-top: 25px;
+}
+.page-jump >div{
+	line-height: 25px;
+	font-size: 12px;
+	color: rgb(88,88,93);
+	background: #FFFFFF;
+	border: solid 1px rgb(230,231,232);
+	padding:0px 11px; 
+	float: left;
+}
+.page-jump .select{
+	line-height: 25px;
+	font-size: 12px;
+	color: #FFFFFF;
+	background: rgb(153,156,161);
+}
+
+
+
+/*
+	车辆列表
+*/
+.goods-inlist{
+	padding-top: 5px;
+	margin-left: 15px;
+}
+.vehicle-list{
+	margin-top: 30px;
+	margin-left: 30px;
+	overflow: hidden;
+	padding-bottom: 10px;
+	border-bottom: solid 1px rgb(230,230,230) ;
+}
+.vehicle-list .vehicle-one {
+	margin-right: 15px;
+	float: left;
+	margin-bottom: 25px;
+}
+.vehicle-list .vehicle-one .vehicle-pic{
+	background-size: 180px 136px;
+	width: 180px;
+	height: 136px;
+}
+.vehicle-list .vehicle-one .vehicle-name{
+	color: rgb(65,63,77);
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-left: 18px;
+}
+.vehicle-list .vehicle-one .vehicle-age{
+	color: rgb(65,63,77);
+	font-size: 14px;
+	line-height: 20px;
+	margin-left: 18px;
+}
+.vehicle-list .vehicle-one .vehicle-price{
+	color: rgb(255,0,0);
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 5px;
+	margin-left: 18px;
+}
+
+
+/*
+	人员列表
+*/
+table{
+	border-collapse:collapse;
+}
+.personal-list {
+	margin-top: 30px;
+	margin-left: 40px;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+.personal-list .personal-one td {
+	line-height: 22px;
+	padding: 10px 0;
+	border-bottom: solid 1px rgb(230,230,230) ;
+}
+
+.personal-list .personal-one .personal-title a {
+	color: rgb(76,172,226);
+	font-size: 14px;
+}
+.personal-list .personal-one .personal-price{
+	color: rgb(255,0,0);
+	font-size: 14px;
+	text-align: right;
+}
+
+

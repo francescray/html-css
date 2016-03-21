@@ -1,0 +1,244 @@
+td a{
+	font-size:14px;
+	line-height:14px;
+	color:red;
+	text-align: right;
+}
+input{
+	color:rgb(101,101,101);
+}
+select{
+	color:rgb(101,101,101);
+}
+/* 
+	供应的右边栏 填写表格
+*/
+.mainbody .right .apply{
+	margin: 0px 38px 0 18px;
+	padding-bottom: 18px;
+	overflow: hidden;
+	border-bottom:solid 1px rgb(230,230,230);
+}
+.mainbody .right .apply .home-logo{
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	border:solid 1px rgb(230,230,230);
+	background: url('../img/homelogo.png') no-repeat center;
+	background-size: 30px 23px;
+	float: left;
+}
+.mainbody .right .apply .instruct {
+	float: left;
+	padding-top: 28px;
+	padding-left: 22px;
+}
+.mainbody .right .apply .instruct .instruct-name{
+	font-size:18px;
+	line-height:24px;
+	color:rgb(101,101,101);
+	text-align: left;
+}
+.mainbody .right .apply .instruct .instruct-detail{
+	font-size:12px;
+	line-height:20px;
+	color:rgb(121,121,121);
+	text-align: left;
+	padding-top: 4px;
+}
+.mainbody .right .apply .instruct .instruct-detail a{
+	color:rgb(76,172,226);
+}
+.mainbody .right .apply .require-list{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+	float: right;
+	margin-right: 20px;
+	padding: 0 20px;
+	border-radius: 2px;
+	margin-top: 28px;
+}
+.mainbody .right .apply .ask-help{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+	float: right;
+	margin-right: 24px;
+	padding: 0 20px;
+	border-radius: 2px;
+	margin-top: 28px;
+}
+/*
+	common_edit
+*/
+.mainbody .right .apply-detail .onerent{
+	margin-left:144px ;
+	margin-top: 20px;
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+	padding-bottom: 30px;
+}
+.mainbody .right .apply-detail .onerent .inpu {
+	width: 130px;
+	height: 31px;
+	color:rgb(101,101,101);
+}
+.mainbody .right  input{
+	border: solid 1px rgb(204,204,204);
+	padding-left: 6px;
+}
+.mainbody .right .tdname {
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+	text-align: right;
+	padding: 12px 16px 12px 0;
+}
+.mainbody .right .tdname a{
+	font-size:14px;
+	line-height:14px;
+	color:red;
+	text-align: right;
+}
+/*
+	input 格式
+*/
+.mainbody .right .inp {
+	width: 350px;
+	height: 28px;
+}
+.mainbody .right .position {
+	width: 153px;
+	height: 28px;
+	margin-right: 2px;
+}
+.mainbody .right .price-num{
+	width: 245px;
+	height: 28px;
+}
+/*
+	select 格式
+*/
+.mainbody .right .sel {
+	width: 356px;
+	height: 28px;
+	color:rgb(101,101,101);
+}
+.mainbody .right .price-type{
+	width: 100px;
+	height: 28px;
+	color:rgb(101,101,101);
+}
+.mainbody .right .describe{
+	outline: none;
+	width: 358px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	padding: 5px;
+	height: 84px;
+	font-size: 14px;
+	line-height:139%;
+	color:rgb(101,101,101);
+}
+.mainbody .right .career-type{
+	width: 130px;
+	height: 28px;
+	color:rgb(101,101,101);
+}
+/*
+
+	checkbox 格式
+*/
+.mainbody .right .check{
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+	text-align: right;
+	padding: 16px 16px 16px 0px;
+	width: 20px;
+	background: url('../img/checkbox.png') no-repeat;
+}
+/*
+	点击的选项
+*/
+.mainbody .right .clickandsubmit {
+	text-align: right;
+	padding: 16px 16px 16px 0;
+}
+.mainbody .right .cas {
+	font-size:12px;
+	line-height:16px;
+	color:rgb(101,101,101);
+	margin-left: -4px;
+	text-align: left;
+	padding: 10px 16px 4px 0;
+}
+.mainbody .right .cas a{
+	color: rgb(76,172,226);
+}
+.mainbody .right .submit{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	padding: 0 20px;
+	height: 30px;
+	background-color: rgb(76,172,226);
+	border: 0;
+	margin-left: 50px;
+}
+/*
+	上传图片
+*/
+.mainbody .right .loadpic{
+	font-size:14px;
+	line-height:25px;
+	color:rgb(77,77,77);
+	border: solid 1px rgb(204,204,204);
+	background: url('../img/loadpic.png') no-repeat left 6px center;
+	background-size: 15px 14px;
+	padding-left: 26px;
+	padding-right: 10px;
+	margin-left: 15px;
+}
+/*
+	personal_edit
+*/
+.mainbody .right .apply-detail .onerent .age {
+	width: 158px;
+	height: 28px;
+}
+.mainbody .right .apply-detail .onerent .minus{
+	width: 8px;
+	height: 28px;
+	margin: 0 8px;
+	border: 0px;
+}
+/*
+	warehouse_edit  修改掉了 不知道是否有用了
+*/
+.mainbody .right .apply-detail .onerent .sharetime {
+	width: 136px;
+	height: 28px;
+}
+.mainbody .right .apply-detail .onerent .calendar {
+	background:url("../img/calendar.png") no-repeat center;
+	background-size: 23px 23px;
+	width: 23px;
+	height: 28px;
+	margin-left: 4px;
+	border: 0px;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+}
+.mainbody .right .apply-detail .onerent .minus{
+	width: 8px;
+	height: 4px;
+	margin: 0 6px;
+	border: 0px;
+	border-bottom: solid 2px rgb(230,230,230);
+}

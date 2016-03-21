@@ -1,0 +1,88 @@
+.supply-demand{
+	font-size:18px;
+	line-height:306%;
+	color:rgba(71,71,73,0.8);
+	overflow: hidden;
+	border-bottom: solid 2px #4cace2;
+	margin-top: 14px;
+}
+.supply-demand > div {
+	float: left;
+	font-size:18px;
+	line-height:306%;
+	color:rgba(71,71,73,0.8);
+	padding: 0 12px;
+}
+.supply-demand > div a{
+	float: left;
+	font-size:18px;
+	line-height:306%;
+	color:rgba(71,71,73,0.8);
+	padding: 0 12px;
+}
+.supply-demand .select{
+	background-color: rgb(76,172,226);
+	color:rgb(255,255,255);
+}
+/*
+	第二部分
+*/
+.search-opt{
+	overflow: hidden;
+	margin:5px 0px 0px 0px;
+	background-color: #FFFFFF;
+	border-bottom:solid 1px rgb(230,230,230) 
+}
+.hardware .condition{
+	border-bottom: solid 1px rgb(230,230,230) ;
+	overflow: hidden;
+}
+.hardware .condition .conditionoption{
+	font-size:12px;
+	line-height:12px;
+	color:#000000;
+	padding: 20px 20px;
+	float: left;
+}
+.hardware .condition .choosed{
+	margin-right: 8px;
+}
+.hardware .condition .choosed >div{
+	float: left;
+	border:solid 1px rgb(255,172,120);
+	font-size:14px;
+	line-height:30px;
+	color:rgb(83,83,83);
+	padding:0px 33px 0px 5px;
+	margin:10px 8px 10px 0;
+	background:url('../img/clickdelet.png') no-repeat center right 1px;
+	background-size: 25px 25px;
+}
+.hardware .condition .clearchoose {
+	background:url('../img/rubbish.png') no-repeat center left;
+	background-size: 11px 12px;
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(85,85,85);
+	padding: 18px 20px 18px 20px;
+}
+.hardware .condition .clearchoose a{
+	font-size:12px;
+	line-height:12px;
+	color:rgb(85,85,85);
+}
+.hardware .condition .subscription{
+	background:url('../img/mail.png') no-repeat center left;
+	background-size: 13px 10px;	
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(75,171,225);
+	padding: 18px 0px 18px 20px;
+}
+
+.goods-list{
+	margin:10px 0px 75px 0px;
+	background-color: #FFFFFF;
+}

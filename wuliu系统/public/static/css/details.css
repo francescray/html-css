@@ -1,0 +1,177 @@
+.detail-body{
+	margin: 14px 18px 75px 100px;
+	overflow: hidden;
+}
+.detail-body .detail-message{
+	background-color: #FFFFFF;
+	float: left;
+}
+.detail-body .detail-message .page-front{
+	overflow:hidden;
+	padding: 28px 24px 20px 24px;
+}
+.detail-body .detail-message .page-title{
+	float: left;
+	font-size:18px;
+	line-height:20px;
+	color:rgba(75,171,225,0.8);
+}
+.detail-body .detail-message .page-watch{
+	float: right;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(179,179,179);
+	margin-top: 10px;
+	padding-right: 22px;
+}
+.detail-body .detail-message .page-time{
+	margin-top: 10px;
+	padding-right: 4px;
+	float: right;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(179,179,179);
+}
+.detail-body .detail-message .page-pic{
+	background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+	width:595px ;
+	height: 374px;
+	margin: 0px 24px;
+}
+.detail-body .detail-message .price-message{
+	overflow: hidden;
+	margin:13px 24px;
+	border: solid 1px rgb(230,230,230);
+	padding-left: 15px;
+}
+.detail-body .detail-message .price-message .unitprice{
+	font-size:12px;
+	line-height:183%;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top:16px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+}
+.detail-body .detail-message .price-message .unitprice a{
+	font-size:30px;
+	font-weight:bold;
+	line-height:20px;
+	color:rgb(71,71,73);
+	float: left;
+}
+.detail-body .detail-message .price-message .area{
+	font-size:12px;
+	line-height:183%;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top:16px;
+	padding-bottom: 10px;
+	padding-right: 14px;
+}
+.detail-body .detail-message .price-message .area a{
+	font-size:30px;
+	font-weight:bold;
+	line-height:20px;
+	color:rgb(71,71,73);
+	float: left;
+}
+.detail-body .detail-message .price-message .claim{
+	float: left;
+	font-size:12px;
+	line-height:183%;
+	color:rgb(71,71,73);
+	float: left;
+	padding-top: 22px;
+}
+.detail-body .detail-message .price-message .cooperation-intention{
+	float: right;
+	font-size:18px;
+	line-height:52px;
+	color:rgb(255,255,255);
+	padding: 0px 25px;
+	background: url('../img/mail-connect.png') no-repeat center left 25px ;
+	background-size: 20px 16px;
+	padding-left: 52px;
+	background-color:rgb(199,82,75); 
+}
+.detail-body .detail-message .page-options{
+	border-bottom: solid 1px rgb(76,172,226);
+	overflow: hidden;
+}
+.detail-body .detail-message .page-options >div{
+	float: left;
+	font-size:18px;
+	line-height:306%;
+	color:rgb(140,140,140);
+	padding: 0 28px;
+}
+.detail-body .detail-message .page-options .select{
+	font-size:18px;
+	line-height:306%;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+}
+.detail-body .detail-dynamic{
+	float: left;
+	background-color: #FFFFFF;
+	margin-left:22px ;
+}
+.detail-body .detail-dynamic .leave-message{
+	overflow: hidden;
+	padding: 15px 30px 12px 30px;
+} 
+.detail-body .detail-dynamic .leave-message .dmessage{
+	float: left;
+	font-size:18px;
+	line-height:18px;
+	color:rgba(71,71,73,0.8);
+	padding-top: 8px;
+	padding-right: 180px;
+}
+.detail-body .detail-dynamic .leave-message .imessage{
+	float: right;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	background-color: rgb(76,172,226);
+	padding: 0 20px;
+	border-radius: 3px;
+}
+.detail-body .detail-dynamic .comments{
+	overflow: hidden;
+	padding:12px 30px;
+}
+.detail-body .detail-dynamic .comments .people{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgba(71,71,73,0.8);
+	padding-right: 6px;
+}
+.detail-body .detail-dynamic .comments .watch-message{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgba(71,71,73,0.8);
+}
+.detail-body .detail-dynamic .comments .people-comment{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(115,204,237);
+}
+.detail-body .detail-dynamic .comments .self-comment{
+	float: left;
+	font-size:12px;
+	line-height:12px;
+	color:rgb(217,148,145);
+}
+.detail-body .detail-dynamic .comments .comments-time{
+	float: right;
+	font-size:11px;
+	line-height:12px;
+	color:rgba(169,169,170,0.8);
+}

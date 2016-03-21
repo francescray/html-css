@@ -1,0 +1,153 @@
+.user-page {
+	margin:0px 30px;
+	background: #FFFFFF;
+}
+.user-page .user-information{
+	margin: 0px 18px 0px 38px;
+	padding-top:36px;
+	padding-bottom: 20px;
+	border-bottom: solid 1px rgb(230,230,230);
+	overflow: hidden;
+}
+.user-page .user-information .inf-logo{
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	border:solid 1px rgb(230,230,230);
+	background: url('../img/person.png') no-repeat center;
+	background-size: 22px 25px;
+	float: left;
+}
+.user-page .user-information .inf-logo-password{
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	border:solid 1px rgb(230,230,230);
+	background: url('../img/getpassword.png') no-repeat center;
+	background-size: 23px 23px;
+	float: left;
+}
+.user-page .user-information .inf-logo-register{
+	height: 96px;
+	width: 96px;
+	border-radius: 50%;
+	border:solid 1px rgb(230,230,230);
+	background: url('../img/register.png') no-repeat center;
+	background-size: 23px 23px;
+	float: left;
+}
+.user-page .user-information .inf-title{
+	float: left;
+	color: rgb(102,102,102);
+	font-size: 18px;
+	line-height: 18px;
+	padding:40px 15px 0px 25px;
+}
+.user-page .user-information .inf-title-register{
+	float: left;
+	color: rgb(102,102,102);
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: 400;
+	padding:40px 15px 0px 25px;
+}
+.user-page .user-information .int-step{
+	float: left;
+	color: rgb(102,102,102);
+	font-size: 16px;
+	line-height: 16px;
+	padding:45px 15px 0px 25px;
+}
+.user-page .user-information .int-step a{
+	color: rgb(76,172,226);
+	font-size: 18px;
+	line-height: 18px;
+	padding:0px 4px;
+}
+.user-page .user-information .inf-login{
+	display: block;
+	float: right;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	padding: 0px 30px;
+	background-color: rgb(76,172,226);
+	margin: 35px 8px 20px 30px;
+}
+.user-page .user-information .inf-forgetpassword{
+	float: right;
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	padding: 0px 20px;
+	background-color: rgb(76,172,226);
+	margin: 35px 8px 20px 30px;
+}
+
+/*
+	table part
+*/
+.user-page .information-table{
+	margin: 10px auto;
+	padding-bottom:160px;
+}
+.user-page .information-table table{
+	margin: 0 auto;
+}
+.mainbody  .user-page .information-table input{
+	border: solid 1px rgb(204,204,204);
+	padding: 8px 6px;
+	width: 250px;
+}
+.mainbody .user-page .information-table .sel{
+	border: solid 1px rgb(204,204,204);
+	padding: 8px 6px;
+	width: 265px;
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+}
+.mainbody .user-page .information-table .tdname {
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+	text-align: right;
+	padding: 16px;
+}
+.mainbody .user-page .information-table .tdname a{
+	font-size:14px;
+	line-height:14px;
+	color:red;
+	text-align: right;
+}
+.mainbody .user-page .information-table .identifying-code{
+	width:200px;
+}
+.mainbody .user-page .information-table .resset{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	text-align: center;
+	background-color: rgb(76,172,226);
+	margin: 35px 8px 20px 70px;
+	width: 90px;
+}
+.mainbody .user-page .information-table .check{
+	font-size:14px;
+	line-height:14px;
+	color:rgb(101,101,101);
+	text-align: right;
+	padding: 16px 16px 16px 0px;
+	width: 20px;
+	background: url('../img/checkbox.png') no-repeat;
+}
+.mainbody .user-page .information-table .login-button{
+	font-size:12px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	text-align: center;
+	background-color: rgb(76,172,226);
+	margin: 15px 38px 20px 40px;
+	width: 90px;
+	border: none;
+}

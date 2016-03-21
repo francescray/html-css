@@ -1,0 +1,47 @@
+/*
+	 pc 个人信息左导航栏
+*/
+.mainbody .left .pc{
+	color:rgb(255,255,255) ;
+	background-color: rgb(76,172,226) ;
+	font-size:18px;
+	line-height:52px;
+	width: 166px;
+	height: 52px;
+	padding-left: 34px;
+	text-align: left;
+}
+.mainbody .left ul {
+	list-style:none;
+	margin:0px;
+	margin-bottom: 8px;
+} 
+.mainbody .left a {
+	display: block;
+	font-size:16px;
+	line-height:50px;
+	color:rgb(147,147,147);
+	width: 166px;
+	height: 50px;
+	padding-left: 34px;
+	text-align: left;
+	border-bottom: solid 1px #E6E6E6;
+	background-color: #FFF;
+	display: block;
+}
+.mainbody .left .new {
+	background: #FFF url('../img/point.png') no-repeat center left 16px;
+	background-size: 6px 6px;
+}
+.mainbody .left li a{
+	color:rgb(147,147,147);
+	display: block;
+}
+.mainbody .left a:hover{
+	background-color: #EEE;
+	color: rgb(76,172,226);
+}
+.mainbody .left .select a{
+	background-color:rgb(247,247,247)!important;
+	color: rgb(76,172,226);
+}

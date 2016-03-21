@@ -1,0 +1,35 @@
+.mainbody .right .firstpart{
+	margin: 0px 12px;
+	overflow: hidden;
+	border-bottom:solid 1px rgb(230,230,230);
+}
+.mainbody .right .firstpart .instruct {
+	overflow: hidden;
+	padding-top: 25px;
+	padding-left: 20px;
+	padding-bottom: 18px;
+}
+.mainbody .right .firstpart .instruct .instruct-name{
+	font-size:18px;
+	line-height:24px;
+	color:rgb(101,101,101);
+	text-align: left;
+	float: left;
+}
+.mainbody .right .firstpart .instruct .instruct-detail{
+	font-size:12px;
+	line-height:12px;
+	color:rgb(121,121,121);
+	text-align: left;
+	padding-top: 4px;
+	float: left;
+	margin-top: 4px;
+	padding-left: 6px;
+} 
+form{
+	display: block;
+}
+.mainbody .right .secondpart .coporation-inf{
+	margin: 0 auto;
+	padding: 20px 0;
+}
