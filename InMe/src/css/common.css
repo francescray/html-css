@@ -268,16 +268,17 @@ footer .down > span {
     margin:24px auto;
     text-align: center;
     width: 65%;
-    height:26px;
-    background: rgb(243,243,243);
-    font-size: 12.5px;
+    height:40px;
+    background: #51b7f1;
+    font-size: 13.5px;
     line-height:26px;
-    color:rgb(89,89,89);
+    color:#FFFFFF;
 }
 .more .clickmore a{
-    font-size: 12.5px;
-    line-height:26px;
-    color:rgb(89,89,89);
+    font-size: 13.5px;
+    line-height:40px;
+    color:#FFFFFF;
+	vertical-align:middle;
 }
 .page-label{
     margin: 0 12px 15px 12px;

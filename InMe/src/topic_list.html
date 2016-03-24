@@ -33,13 +33,13 @@
 		<div class="clickmore"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.inme.cn">更多内容</a></div>
 	</div>
 <div class="topic-footer">
-	<div class="share" @click="show" style="display: none"></div>
+	<div class="share" @click="show"></div>
 	<a href="topic_form.html?topicid={{ topicid }}"><div class="post"></div></a>
 </div>
 <template v-if="mask">
 	<div class="mask" @click="hide">
 		<div class="qrcode" @click="stop">
-			<img src="img/static/DRcode.png" width="150">
+			<img :src="v.qrcode" width="150">
 		</div>
 	</div>
 </template>
@@ -74,6 +74,9 @@
 			vm.v = data.data;
 			vm_title.title = '#' + data.data.name;
 			wx_share();
+		}
+		if (data.code == '33') {
+			location.href='/no_longer_exists.html';
 		}
 	});
 

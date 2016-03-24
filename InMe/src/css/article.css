@@ -41,6 +41,15 @@
     color:#333333;
     text-align:left;
 }
+#article .page1 .content p{
+	margin-bottom: 10px;
+}
+#article .page1 .content{
+	font-size: 15px;
+	color: #4e4e4e;
+	line-height: 26px;
+	text-align: justify;
+}
 #article .divider-bar{
 	height: 12px;
 	background: rgb(230,230,230);
