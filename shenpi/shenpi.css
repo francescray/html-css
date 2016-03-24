@@ -1,0 +1,329 @@
+* {
+	padding:0;
+	margin:0;
+}
+body{
+	line-height: 1.5;
+	font-family: arial, 'Microsoft Yahei', sans-serif;
+	background-color: #FFFFFF;
+	font-size: 12px;
+}
+img {
+	border: none;
+}
+td{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+textarea{
+	border: solid 1px rgb(204,204,204);
+}
+li{
+	list-style:none;
+	margin:0px;
+	padding: 0px;
+}
+.container {
+   margin: 0 auto;
+   width: 1050px;
+}
+.header{
+	background:url('./img/header-bg.png');
+	background-size: no-repeat;
+	background-position: cover;
+}
+.header-cn{
+	padding-top: 48px;
+	color: #FFFFFF;
+	font-size: 30px;
+	line-height: 30px;
+}
+.header-eng{
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 20px;
+	padding-bottom: 38px;
+}
+.nav{
+	overflow: hidden;
+	background-color: rgb(20,111,200);
+}
+.nav a{
+	font-size:16px;
+	color:rgb(255,255,255);
+	text-align:left;
+	line-height: 50px;
+}
+.nav-home{
+	background:url('./img/nav-home.png') no-repeat left center;
+	background-size: 12px 14px;
+	padding-left: 18px;
+	float: left;
+}
+.nav-search{
+	float: left;
+	padding-left: 8px;
+}
+.nav-arrow{
+	padding-right: 8px;
+	background:url('./img/nav-arrow.png') no-repeat center;
+	background-size: 11px 12px;
+	float: left;
+	height: 50px;
+	width: 11px;
+}
+.mainbody{
+	margin-bottom: 75px;
+}
+.firstpart{
+	margin-top: 12px;
+	overflow: hidden;
+	padding-bottom: 14px;
+	border-bottom: solid 1px rgb(20,111,200);
+}
+.firstpart .basic-information{
+	float: left;
+	border: solid 1px rgb(204,204,204);
+}
+.firstpart .basic-information .bi-title{
+	background:url('./img/bi-home.png') no-repeat center left 8px;
+	background-color: rgb(20,111,200);
+	background-size: 16px 21px;
+	padding-left: 28px;
+	font-size:20px;
+	line-height: 42px;
+	color:rgb(255,255,255);
+	padding-right: 100px;
+}
+.firstpart .basic-information .bi-content{
+	padding: 17px 33px;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+}
+.firstpart .basic-information .bi-content .bi-key{
+	text-align: right;
+}
+.results-evaluation {
+	margin-left:330px ;
+	border: solid 1px rgb(204,204,204);
+}
+.results-evaluation .re-title{
+	font-size:20px;
+	color:rgb(51,51,51);
+	line-height: 42px;
+	margin-left: 20px;
+}
+.results-evaluation .re-body {
+	overflow: hidden;
+}
+.results-evaluation .re-body .re-textarea{
+	float: left;
+	margin-left: 20px;
+	margin-top: 7px;
+}
+.results-evaluation .re-body .describe{
+	padding-left: 21px;
+	padding-top: 16px;
+	width: 576px;
+	height: 94px;
+}
+.results-evaluation .re-body .re-chebox{
+	float: left;
+}
+.results-evaluation .re-body .re-chebox .checkbox{
+	padding-bottom: 22px;
+	padding-left: 15px;
+}
+.results-evaluation .submit{
+	font-size:16px;
+	line-height:162%;
+	color:rgb(255,255,255);
+	padding: 0 32px;
+	background-color: rgb(20,111,200);
+	border:0px;
+	border-radius: 5px;
+	margin:2px 0px 10px 275px;
+}
+.secondpart{
+	margin-top: 14px;
+	overflow: hidden;
+}
+.secondpart .catalog{
+	float: left;
+	border: solid 1px rgb(204,204,204);
+}
+.secondpart .title{
+	font-size:20px;
+	color:#FFFFFF;
+	line-height: 42px;
+	text-align: center;
+	background-color: rgb(20,111,200);
+}
+.secondpart .catalog .catalog-list .catalog-inlist{
+	background: rgb(240,248,250);
+	border-bottom: solid 1px rgb(218,218,218);
+	line-height: 44px;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	padding-left: 26px;
+	overflow: hidden;
+}
+.secondpart .catalog .catalog-list .select{
+	background: #FFFFFF;
+	border-bottom: solid 1px rgb(218,218,218);
+}
+.secondpart .catalog .catalog-list .select .catalog-percentage{
+	color:rgb(255,102,102) !important;
+}
+.secondpart .catalog .catalog-list .catalog-inlist .catalog-index{
+	float: left;
+	padding-right: 66px;
+	line-height: 44px;
+}
+.secondpart .catalog .catalog-list .catalog-inlist .catalog-percentage{
+	float: right;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	margin-right: 34px;
+	line-height: 44px;
+}
+.file-text{
+	float: left;
+	margin-left: 18px;
+	width: 280px;
+	border: solid 1px rgb(204,204,204);
+}
+.file-text .ft-content{
+	font-size:14px;
+	line-height:186%;
+	color:rgb(150,150,150);
+	padding: 10px;
+}
+.similar-text{
+	float: left;
+	margin-left: 18px;
+	width: 280px;
+	border: solid 1px rgb(218,218,218);
+}
+.st-content{
+	font-size:14px;
+	line-height:186%;
+	color:rgb(150,150,150);
+	padding: 10px;
+}
+.similar-project{
+	margin-left: 18px;
+	float: left;
+	overflow: hidden;
+	width: 180px;
+	border: solid 1px rgb(218,218,218);
+}
+.similar-project .sp-new{
+	overflow: hidden;
+}
+.similar-project .sp-new .sp-logo{
+	background: url('./img/new.png') no-repeat center left 2px;
+	background-color: rgb(114,184,253);
+	background-size: 9px 27px;
+	width: 14px;
+	float: left;
+	height: 36px;
+}
+.similar-project .sp-information{
+	margin: 0 14px;
+	overflow: hidden;
+	border-bottom: solid 1px rgb(218,218,218);
+}
+.similar-project .sp-new .sp-newcontent{
+	font-size:16px;
+	line-height:162%;
+	color:rgb(255,254,254);
+	background-color: rgb(114,209,250);
+	margin-left: 14px;
+}
+.similar-project .sp-new .sp-newcontent a{
+	font-size:16px;
+	line-height:162%;
+	color:red;
+}
+.similar-project .sp-content{
+	padding-top:12px;
+	font-size:12px;
+	line-height:186%;
+}
+.similar-project .bi-title{
+	background-color: rgb(20,111,200);
+	background-size: 16px 21px;
+	padding-left: 28px;
+	padding-right: 100px;
+}
+.similar-project .sp-information .sp-checkbox{
+	float: left;
+	font-size:12px;
+	line-height:186%;
+	color:rgb(51,51,51);
+	padding-left:12px;
+	padding-top: 5px;
+}
+.similar-project .sp-information .sp-readmore{
+	float: right;
+	background: url('./img/arrow.png') no-repeat center right 15px;
+	background-size: 13px 11px;
+	line-height: 36px;
+	font-size:14px;
+	line-height:186%;
+	color:rgb(51,51,51);
+	padding-right: 30px;
+}
+.similar-project .catalog-list .catalog-inlist{
+	background: #FFFFFF;
+	border-bottom: solid 1px rgb(218,218,218);
+	line-height: 44px;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	padding-left: 26px;
+	overflow: hidden;
+}
+.similar-project .catalog-list .catalog-inlist .catalog-index{
+	float: left;
+	line-height: 44px;
+}
+.similar-project .catalog-list .catalog-inlist .catalog-percentage{
+	float: right;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	margin-right: 34px;
+	line-height: 44px;
+}
+.similar-project .sp-list .sp-inlist{
+	background: rgb(240,248,250);
+	border-bottom: solid 1px rgb(218,218,218);
+	line-height: 44px;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	padding-left: 16px;
+	overflow: hidden;
+}
+.similar-project .sp-list .sp-inlist .sp-index{
+	float: left;
+	line-height: 44px;
+}
+.similar-project .sp-list .sp-inlist .sp-percentage{
+	float: right;
+	font-size:16px;
+	line-height:162%;
+	color:rgb(51,51,51);
+	margin-right: 14px;
+	line-height: 44px;
+}
+
+
